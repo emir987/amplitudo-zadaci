@@ -1,0 +1,40 @@
+<svg id="_004-briefcase" data-name="004-briefcase" 
+    xmlns="http://www.w3.org/2000/svg" width="17.838" height="15.678" viewBox="0 0 17.838 15.678">
+    <defs>
+        <style>
+                                                .cls-1-1 {
+                                                    fill: #5a5a5a;
+                                                }
+
+                                                .cls-2-1 {
+                                                    fill: #444;
+                                                }
+
+                                                .cls-3-1 {
+                                                    fill: #6e6e6e;
+                                                }
+
+                                                .cls-4-1 {
+                                                    fill: #fdbf00;
+                                                }
+
+                                                .cls-5-1 {
+                                                    fill: #ff9f00;
+                                                }
+
+                                                .cls-6-1 {
+                                                    fill: #ffd400;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_160" data-name="Path 160" class="cls-1-1" d="M158.317,0V3.658h-1.045V1.045h-5.226V3.658H151V0Zm0,0" transform="translate(-145.739)" />
+    <path id="Path_161" data-name="Path 161" class="cls-2-1" d="M259.658,0V3.658h-1.045V1.045H256V0Zm0,0" transform="translate(-247.081)" />
+    <path id="Path_162" data-name="Path 162" class="cls-1-1" d="M0,210H17.838v8.362H0Zm0,0" transform="translate(0 -202.683)" />
+    <path id="Path_163" data-name="Path 163" class="cls-2-1" d="M256,210h8.919v8.362H256Zm0,0" transform="translate(-247.081 -202.683)" />
+    <path id="Path_164" data-name="Path 164" class="cls-3-1" d="M17.838,90v4.181l-6.306,2.09H6.306L0,94.181V90Zm0,0" transform="translate(0 -86.864)" />
+    <path id="Path_165" data-name="Path 165" class="cls-1-1" d="M264.919,90v4.181l-6.306,2.09H256V90Zm0,0" transform="translate(-247.081 -86.864)" />
+    <path id="Path_166" data-name="Path 166" class="cls-4-1" d="M186.226,241.045l-1.045,2.09h-3.136L181,241.045,183.613,240Zm0,0" transform="translate(-174.694 -231.638)" />
+    <path id="Path_167" data-name="Path 167" class="cls-5-1" d="M258.613,241.045l-1.045,2.09H256V240Zm0,0" transform="translate(-247.081 -231.638)" />
+    <path id="Path_168" data-name="Path 168" class="cls-6-1" d="M181,210h5.226v2.09H181Zm0,0" transform="translate(-174.694 -202.683)" />
+    <path id="Path_169" data-name="Path 169" class="cls-4-1" d="M256,210h2.613v2.09H256Zm0,0" transform="translate(-247.081 -202.683)" />
+</svg>

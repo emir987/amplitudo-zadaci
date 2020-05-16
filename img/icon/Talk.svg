@@ -1,0 +1,46 @@
+<svg id="_007-talk" data-name="007-talk" 
+    xmlns="http://www.w3.org/2000/svg" width="18.924" height="21.532" viewBox="0 0 18.924 21.532">
+    <defs>
+        <style>
+                                                .cls-14-1 {
+                                                    fill: #ffd400;
+                                                }
+
+                                                .cls-14-2 {
+                                                    fill: #fdbf00;
+                                                }
+
+                                                .cls-14-3 {
+                                                    fill: #5a5a5a;
+                                                }
+
+                                                .cls-14-4 {
+                                                    fill: #73bcff;
+                                                }
+
+                                                .cls-14-5 {
+                                                    fill: #0095ff;
+                                                }
+
+                                                .cls-14-6 {
+                                                    fill: #444;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_187" data-name="Path 187" class="cls-14-1" d="M0,0V8.873H2.889L4.416,10.4,5.942,8.873h7.04L14.509,10.4l1.527-1.527h2.889V0ZM0,0" />
+    <path id="Path_188" data-name="Path 188" class="cls-14-2" d="M234.462,0V8.873h-2.889L230.046,10.4,228.52,8.873H225V0Zm0,0" transform="translate(-215.538)" />
+    <path id="Path_189" data-name="Path 189" class="cls-14-3" d="M60,61H73.878v1.262H60Zm0,0" transform="translate(-57.477 -58.435)" />
+    <path id="Path_190" data-name="Path 190" class="cls-14-3" d="M90,121h11.355v1.262H90Zm0,0" transform="translate(-86.215 -115.911)" />
+    <path id="Path_191" data-name="Path 191" class="cls-14-4" d="M18.785,391A3.832,3.832,0,0,0,15,394.827v1.262h7.57v-1.262A3.832,3.832,0,0,0,18.785,391Zm0,0" transform="translate(-14.369 -374.557)" />
+    <path id="Path_192" data-name="Path 192" class="cls-14-5" d="M108.785,394.827v1.262H105V391A3.832,3.832,0,0,1,108.785,394.827Zm0,0" transform="translate(-100.584 -374.557)" />
+    <path id="Path_193" data-name="Path 193" class="cls-14-4" d="M47.523,271a2.523,2.523,0,1,0,2.523,2.523A2.531,2.531,0,0,0,47.523,271Zm0,0" transform="translate(-43.108 -259.603)" />
+    <path id="Path_194" data-name="Path 194" class="cls-14-5" d="M105,276.046V271a2.523,2.523,0,1,1,0,5.046Zm0,0" transform="translate(-100.584 -259.603)" />
+    <path id="Path_195" data-name="Path 195" class="cls-14-4" d="M258.785,391A3.832,3.832,0,0,0,255,394.827v1.262h7.57v-1.262A3.832,3.832,0,0,0,258.785,391Zm0,0" transform="translate(-244.276 -374.557)" />
+    <path id="Path_196" data-name="Path 196" class="cls-14-5" d="M348.785,394.827v1.262H345V391A3.832,3.832,0,0,1,348.785,394.827Zm0,0" transform="translate(-330.491 -374.557)" />
+    <path id="Path_197" data-name="Path 197" class="cls-14-4" d="M287.523,271a2.523,2.523,0,1,0,2.523,2.523A2.531,2.531,0,0,0,287.523,271Zm0,0" transform="translate(-273.015 -259.603)" />
+    <path id="Path_198" data-name="Path 198" class="cls-14-5" d="M345,276.046V271a2.523,2.523,0,0,1,0,5.046Zm0,0" transform="translate(-330.491 -259.603)" />
+    <g id="Group_18" data-name="Group 18" transform="translate(9.462 2.565)">
+        <path id="Path_199" data-name="Path 199" class="cls-14-6" d="M225,121h5.677v1.262H225Zm0,0" transform="translate(-225 -118.477)" />
+        <path id="Path_200" data-name="Path 200" class="cls-14-6" d="M225,61h6.939v1.262H225Zm0,0" transform="translate(-225 -61)" />
+    </g>
+</svg>

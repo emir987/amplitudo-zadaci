@@ -1,0 +1,56 @@
+<svg id="_001-contract" data-name="001-contract" 
+    xmlns="http://www.w3.org/2000/svg" width="17.838" height="17.838" viewBox="0 0 17.838 17.838">
+    <defs>
+        <style>
+                                                .cls-1 {
+                                                    fill: #ede9e8;
+                                                }
+
+                                                .cls-2 {
+                                                    fill: #dfd7d5;
+                                                }
+
+                                                .cls-3 {
+                                                    fill: #c4b3af;
+                                                }
+
+                                                .cls-4 {
+                                                    fill: #d2c5c2;
+                                                }
+
+                                                .cls-5 {
+                                                    fill: #ff7816;
+                                                }
+
+                                                .cls-6 {
+                                                    fill: #6e6e6e;
+                                                }
+
+                                                .cls-7 {
+                                                    fill: #444;
+                                                }
+
+                                                .cls-8 {
+                                                    fill: #dd3400;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_104" data-name="Path 104" class="cls-1" d="M12.612,3.136v14.7H0V0H8.431Zm0,0" />
+    <path id="Path_105" data-name="Path 105" class="cls-2" d="M187.306,3.136v14.7H181V0h2.125Zm0,0" transform="translate(-174.694)" />
+    <path id="Path_106" data-name="Path 106" class="cls-3" d="M242.681,0H242V3.136h4.181v-.8Zm0,0" transform="translate(-233.569)" />
+    <path id="Path_107" data-name="Path 107" class="cls-4" d="M90,151h6.341v1.045H90Zm0,0" transform="translate(-86.864 -145.739)" />
+    <path id="Path_108" data-name="Path 108" class="cls-4" d="M60,211h8.431v1.045H60Zm0,0" transform="translate(-57.91 -203.649)" />
+    <path id="Path_109" data-name="Path 109" class="cls-4" d="M60,271h8.431v1.045H60Zm0,0" transform="translate(-57.91 -261.558)" />
+    <path id="Path_110" data-name="Path 110" class="cls-4" d="M60,331h8.431v1.045H60Zm0,0" transform="translate(-57.91 -319.468)" />
+    <path id="Path_111" data-name="Path 111" class="cls-5" d="M60,421h3.171v1.045H60Zm0,0" transform="translate(-57.91 -406.332)" />
+    <g id="Group_15" data-name="Group 15" transform="translate(6.306 5.261)">
+        <path id="Path_112" data-name="Path 112" class="cls-3" d="M181,151h3.171v1.045H181Zm0,0" transform="translate(-181 -151)" />
+        <path id="Path_113" data-name="Path 113" class="cls-3" d="M181,211h4.216v1.045H181Zm0,0" transform="translate(-181 -208.91)" />
+        <path id="Path_114" data-name="Path 114" class="cls-3" d="M181,271h4.216v1.045H181Zm0,0" transform="translate(-181 -266.819)" />
+        <path id="Path_115" data-name="Path 115" class="cls-3" d="M181,331h4.216v1.045H181Zm0,0" transform="translate(-181 -324.729)" />
+    </g>
+    <path id="Path_116" data-name="Path 116" class="cls-6" d="M400.879,182.782,398.662,185h-1.478v-1.478L399.4,181.3a1.045,1.045,0,0,1,1.478,1.478Zm0,0" transform="translate(-383.345 -174.693)" />
+    <path id="Path_117" data-name="Path 117" class="cls-7" d="M400.879,191.228l-2.217,2.217h-1.478l3.7-3.7A1.048,1.048,0,0,1,400.879,191.228Zm0,0" transform="translate(-383.345 -183.139)" />
+    <path id="Path_118" data-name="Path 118" class="cls-5" d="M255.343,254.869l-4.434,4.434-2.217.739.739-2.217,4.434-4.434Zm0,0" transform="translate(-240.027 -244.562)" />
+    <path id="Path_119" data-name="Path 119" class="cls-8" d="M255.343,275.341l-4.434,4.434-2.217.739L254.6,274.6Zm0,0" transform="translate(-240.027 -265.034)" />
+</svg>

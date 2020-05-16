@@ -1,0 +1,111 @@
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+
+    .radno-iskustvo,
+    .dodaj {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .btn-kreiraj {
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+
+    .btn-kreiraj {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .btn-kreiraj {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .bez-iskustva {
+        padding-top: 0 !important;
+    }
+
+    .grid-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-footer div:nth-child(4) {
+        order: 1;
+    }
+
+    .grid-footer div:nth-child(2) {
+        order: 2;
+    }
+
+    .grid-footer div:nth-child(5) {
+        order: 3;
+    }
+
+    .grid-footer div:nth-child(3) {
+        order: 4;
+    }
+
+    .grid-footer div:nth-child(6) {
+        order: 5;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-bottom div {
+        margin: 5px 0;
+    }
+
+    .footer-bottom div:last-child {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 423px) {
+
+    .radno-iskustvo,
+    .dodaj {
+        font-size: 16px;
+    }
+
+    .pre-nav .info div {
+        font-size: 0.6em !important;
+        margin: 6px 0;
+        padding: 0 6px;
+    }
+
+    .icons-nav {
+        margin: 2px 5px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .pre-nav {
+        padding-top: 0 !important;
+    }
+
+    .icons-nav a {
+        margin: 0 2px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .preferirani-lg {
+        display: none;
+    }
+
+    .preferirani-sm {
+        display: block !important;
+    }
+
+}

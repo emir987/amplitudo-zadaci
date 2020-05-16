@@ -26,3 +26,173 @@ a {
 .grid-text-inner {
     grid-column: 2/4;
 }
+
+
+/* =================== buttons ==================== */
+
+.btn-custom {
+    font-family: "Rubik", sans-serif !important;
+    font-size: 16px;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+}
+
+.btn-reg {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+}
+
+.btn-login {
+    background-color: #f15929;
+}
+
+.white-nav .btn-reg {
+    background-color: white;
+    color: #f15929;
+    border-color: #f15929;
+}
+
+.btn-kreiraj {
+    background-color: rgb(241, 89, 42) !important;
+    border: 2px solid #f15929;
+    height: 60px;
+    border-radius: 5px;
+    width: 25%;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: url('../img/strik.png');
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 50%;
+}
+
+
+
+/* ============= text ============= */
+
+.section-uslovi-koriscenja {
+    text-align: center;
+    margin: 50px;
+}
+
+.section-uslovi-koriscenja div:first-child {
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(241, 89, 42);
+    font-weight: bold;
+    TEXT-ALIGN: CENTER;
+}
+
+.section-uslovi-koriscenja div:nth-child(2) {
+    font-size: 18px;
+    color: rgb(79, 80, 85);
+    text-align: center;
+}
+
+.section-uslovi-koriscenja div:nth-child(2) {
+    font-size: 18px;
+    color: rgb(79, 80, 85);
+    text-align: center;
+}
+
+.header-section h1 span {
+    padding: 0 10px;
+    background-color: black;
+}
+
+.dodaj {
+    font-size: 1.2em;
+    color: #f15929;
+    cursor: pointer;
+}
+
+
+.footer {
+    border-top: 1px solid rgba(163, 163, 163, 0.384);
+    padding-top: 1.5rem;
+}
+
+.footer-title {
+    border-bottom: 1px solid rgba(163, 163, 163, 0.384);
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4f5055;
+    padding: 20px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer-title div span {
+    font-weight: 500;
+}
+
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    margin-bottom: 50px;
+}
+
+
+
+.footer-icons {
+    padding: 20px;
+}
+
+.footer-icons .d-flex {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-icons .d-flex img {
+    margin-right: 8px;
+}
+
+.footer-icons .d-flex a:hover {
+    text-decoration-color: black !important;
+    -webkit-text-decoration-color: black !important;
+    -moz-text-decoration-color: black !important;
+}
+
+.footer-icons .d-flex a {
+    color: #6f6f6f;
+    transition: all .4s ease;
+    text-decoration: underline !important;
+    text-decoration-color: transparent !important;
+    -webkit-text-decoration-color: transparent !important;
+    -moz-text-decoration-color: transparent !important;
+}
+
+.footer>div:first-child {
+    border-bottom: 1px solid rgba(163, 163, 163, 0.384);
+    margin-bottom: 20px;
+}
+
+.footer>div:last-child {
+    margin-bottom: 10px;
+}
+
+.a_social {
+    padding: 0 5px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+}

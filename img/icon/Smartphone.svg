@@ -1,0 +1,40 @@
+<svg id="_003-smartphone" data-name="003-smartphone" 
+    xmlns="http://www.w3.org/2000/svg" width="14.586" height="22.63" viewBox="0 0 14.586 22.63">
+    <defs>
+        <style>
+                                                .cls-16-1 {
+                                                    fill: #444;
+                                                }
+
+                                                .cls-16-2 {
+                                                    fill: #ede9e8;
+                                                }
+
+                                                .cls-16-3 {
+                                                    fill: #dfd7d5;
+                                                }
+
+                                                .cls-16-4 {
+                                                    fill: #73bcff;
+                                                }
+
+                                                .cls-16-5 {
+                                                    fill: #0095ff;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_225" data-name="Path 225" class="cls-16-1" d="M14.586,62.381V77.572L13.26,78.953H1.326L0,77.572V62.381L1.326,61H13.26Zm0,0" transform="translate(0 -58.661)" />
+    <path id="Path_226" data-name="Path 226" class="cls-16-1" d="M171.326,62.381V77.572l-1.15,1.381H165V61h5.176Zm0,0" transform="translate(-156.74 -58.661)" />
+    <path id="Path_227" data-name="Path 227" class="cls-16-2" d="M30,61H42.285V78.953H30Zm0,0" transform="translate(-28.85 -58.661)" />
+    <path id="Path_228" data-name="Path 228" class="cls-16-3" d="M165,61h5.176V78.953H165Zm0,0" transform="translate(-156.74 -58.661)" />
+    <path id="Path_229" data-name="Path 229" class="cls-16-1" d="M0,0H14.586V3.489H0ZM0,0" />
+    <path id="Path_230" data-name="Path 230" class="cls-16-1" d="M0,421H14.586v3.489H0Zm0,0" transform="translate(0 -401.859)" />
+    <path id="Path_231" data-name="Path 231" class="cls-16-4" d="M79.417,256c-2.43,0-4.417,1.553-4.417,3.45v1.15h8.835v-1.15C83.835,257.553,81.847,256,79.417,256Zm0,0" transform="translate(-72.125 -244.226)" />
+    <path id="Path_232" data-name="Path 232" class="cls-16-5" d="M168.45,259.45v1.15H165V256A3.461,3.461,0,0,1,168.45,259.45Zm0,0" transform="translate(-157.344 -244.226)" />
+    <path id="Path_233" data-name="Path 233" class="cls-16-4" d="M107.3,136a2.3,2.3,0,1,0,2.3,2.3A2.307,2.307,0,0,0,107.3,136Zm0,0" transform="translate(-100.007 -129.745)" />
+    <path id="Path_234" data-name="Path 234" class="cls-16-5" d="M165,140.6V136a2.3,2.3,0,0,1,0,4.6Zm0,0" transform="translate(-157.492 -129.745)" />
+    <g id="Group_19" data-name="Group 19" transform="translate(8.26)">
+        <path id="Path_235" data-name="Path 235" class="cls-16-1" d="M165,0h6.326V3.489H165Zm0,0" transform="translate(-165)" />
+        <path id="Path_236" data-name="Path 236" class="cls-16-1" d="M165,421h6.326v3.489H165Zm0,0" transform="translate(-165 -401.859)" />
+    </g>
+</svg>

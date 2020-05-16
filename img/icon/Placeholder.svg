@@ -1,0 +1,28 @@
+<svg id="_001-placeholder" data-name="001-placeholder" 
+    xmlns="http://www.w3.org/2000/svg" width="17.489" height="23" viewBox="0 0 17.489 23">
+    <defs>
+        <style>
+                                                .cls-15-1 {
+                                                    fill: #ff7816;
+                                                }
+
+                                                .cls-15-2 {
+                                                    fill: #ff4b00;
+                                                }
+
+                                                .cls-15-3 {
+                                                    fill: #ede9e8;
+                                                }
+
+                                                .cls-15-4 {
+                                                    fill: #dfd7d5;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_207" data-name="Path 207" class="cls-15-1" d="M17.112,6.247a8.747,8.747,0,1,0-15.363,7.8l7,8.951,7-8.964a8.665,8.665,0,0,0,1.749-5.247A8.494,8.494,0,0,0,17.112,6.247Zm0,0" />
+    <path id="Path_208" data-name="Path 208" class="cls-15-2" d="M203.123,8.789a8.857,8.857,0,0,1-1.693,5.247L194.66,23V0a8.5,8.5,0,0,1,8.1,6.247A8.756,8.756,0,0,1,203.123,8.789Zm0,0" transform="translate(-185.634)" />
+    <path id="Path_209" data-name="Path 209" class="cls-15-3" d="M108.261,180.684a3.454,3.454,0,0,0-3.444,3.444v1.148h6.889v-1.148A3.454,3.454,0,0,0,108.261,180.684Zm0,0" transform="translate(-99.516 -172.204)" />
+    <path id="Path_210" data-name="Path 210" class="cls-15-4" d="M198.1,184.128v1.148H194.66v-4.593A3.454,3.454,0,0,1,198.1,184.128Zm0,0" transform="translate(-185.531 -172.204)" />
+    <path id="Path_211" data-name="Path 211" class="cls-15-3" d="M137.058,60.895a2.3,2.3,0,1,0,2.3,2.3A2.3,2.3,0,0,0,137.058,60.895Zm0,0" transform="translate(-128.314 -58.56)" />
+    <path id="Path_212" data-name="Path 212" class="cls-15-4" d="M194.66,65.487V60.895a2.3,2.3,0,0,1,0,4.593Zm0,0" transform="translate(-185.683 -58.56)" />
+</svg>

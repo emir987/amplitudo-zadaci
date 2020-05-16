@@ -1,0 +1,129 @@
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif !important;
+    padding: 10px 9px !important;
+    margin: 0 5px;
+    font-weight: 300 !important;
+}
+
+.bg-custom {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(129, 129, 129);
+}
+
+.white-nav {
+    background-color: white !important;
+    border-bottom: 1px solid rgba(163, 163, 163, 0.384);
+
+}
+
+.white-nav .nav-link {
+    color: rgb(79, 80, 85) !important;
+}
+
+
+@keyframes myAnimation {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.animatedFadeNav {
+    animation: myAnimation 1.5s;
+    -webkit-animation: myAnimation 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.navbar {
+    padding: 0 1rem !important;
+}
+
+
+#toggle-hamburger[aria-expanded="true"] .navbar-collapse {
+    display: flex !important;
+    flex-direction: column;
+
+}
+
+@media (max-width: 1199px) {
+    .bg-custom {
+        background-color: white !important;
+    }
+
+    .navbar-collapse ul {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .navbar-collapse div {
+        flex-direction: column;
+    }
+
+    .navbar-collapse li,
+    .navbar-collapse div button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid black !important;
+        border-radius: 0 !important;
+        width: 80vw;
+        margin: auto !important;
+    }
+
+    .navbar-collapse>div button {
+        background: none;
+        border: none;
+        color: rgb(129, 129, 129) !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse>div:last-child {
+        margin-bottom: 50px;
+    }
+}
+
+
+
+.navbar-nav {
+    margin-top: 11px !important;
+}
+
+
+.pre-nav {
+    display: flex;
+    background-color: #f15929;
+}
+
+pre-nav .info {
+    color: white;
+    font-size: 0.7em;
+    padding: 0 8px;
+    display: flex;
+    border-right: 1px solid white;
+}
+
+.pre-nav .info {
+    display: flex;
+}
+
+.pre-nav .info div {
+    color: white;
+    font-size: 0.7em;
+    margin: 8px 0;
+    padding: 0 8px;
+    display: flex;
+    border-right: 1px solid white;
+}
+
+.pre-nav .info div:last-child {
+    border-right: none;
+}

@@ -1,0 +1,54 @@
+<svg id="_002-mail" data-name="002-mail" 
+    xmlns="http://www.w3.org/2000/svg" width="19.629" height="19.629" viewBox="0 0 19.629 19.629">
+    <defs>
+        <style>
+                                                .cls-17-1 {
+                                                    fill: #5a5a5a;
+                                                }
+
+                                                .cls-17-2 {
+                                                    fill: #444;
+                                                }
+
+                                                .cls-17-3 {
+                                                    fill: #ede9e8;
+                                                }
+
+                                                .cls-17-4 {
+                                                    fill: #dfd7d5;
+                                                }
+
+                                                .cls-17-5 {
+                                                    fill: #73bcff;
+                                                }
+
+                                                .cls-17-6 {
+                                                    fill: #0095ff;
+                                                }
+
+                                                .cls-17-7 {
+                                                    fill: #ffbd86;
+                                                }
+
+                                                .cls-17-8 {
+                                                    fill: #f6a96c;
+                                                }
+
+                                                .cls-17-9 {
+                                                    fill: #fed2a4;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_213" data-name="Path 213" class="cls-17-1" d="M0,183.3l4.639,4.6V181Zm0,0" transform="translate(0 -174.061)" />
+    <path id="Path_214" data-name="Path 214" class="cls-17-2" d="M391,181v6.9l4.639-4.6Zm0,0" transform="translate(-376.01 -174.061)" />
+    <path id="Path_215" data-name="Path 215" class="cls-17-3" d="M91,0h12.652V16.141H91Zm0,0" transform="translate(-87.511)" />
+    <path id="Path_216" data-name="Path 216" class="cls-17-4" d="M256,0h6.326V16.141H256Zm0,0" transform="translate(-246.185)" />
+    <path id="Path_217" data-name="Path 217" class="cls-17-5" d="M169.45,181a3.461,3.461,0,0,0-3.451,3.45v1.15h6.9v-1.15A3.461,3.461,0,0,0,169.45,181Zm0,0" transform="translate(-159.636 -174.061)" />
+    <path id="Path_218" data-name="Path 218" class="cls-17-6" d="M259.451,184.451v1.15H256V181A3.461,3.461,0,0,1,259.451,184.451Zm0,0" transform="translate(-246.185 -174.061)" />
+    <path id="Path_219" data-name="Path 219" class="cls-17-5" d="M198.3,61a2.3,2.3,0,1,0,2.3,2.3A2.307,2.307,0,0,0,198.3,61Zm0,0" transform="translate(-188.486 -58.661)" />
+    <path id="Path_220" data-name="Path 220" class="cls-17-6" d="M256,65.6V61a2.3,2.3,0,1,1,0,4.6Zm0,0" transform="translate(-246.185 -58.661)" />
+    <path id="Path_221" data-name="Path 221" class="cls-17-7" d="M0,251.39l5.557-2.847,2.532-2.367L0,241Zm0,0" transform="translate(0 -231.76)" />
+    <path id="Path_222" data-name="Path 222" class="cls-17-8" d="M301,246.176l3.323,2.875,4.767,2.339V241Zm0,0" transform="translate(-289.46 -231.76)" />
+    <path id="Path_223" data-name="Path 223" class="cls-17-9" d="M19.629,381.214H0L8.089,376h3.45Zm0,0" transform="translate(0 -361.585)" />
+    <path id="Path_224" data-name="Path 224" class="cls-17-7" d="M265.815,381.214H256V376h1.725Zm0,0" transform="translate(-246.185 -361.585)" />
+</svg>

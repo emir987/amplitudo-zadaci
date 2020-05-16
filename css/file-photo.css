@@ -1,0 +1,28 @@
+.file-photo-card label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.09);
+    background-color: #ffffff;
+    font-size: 18px;
+    color: rgb(197, 196, 196);
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    padding-top: 60px !important;
+    padding-bottom: 30px !important;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.file-photo-card img {
+    max-width: 108px;
+}
+
+.file-photo-card:hover {
+    border-color: red;
+}

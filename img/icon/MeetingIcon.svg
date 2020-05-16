@@ -1,0 +1,56 @@
+<svg id="_002-meeting" data-name="002-meeting" 
+    xmlns="http://www.w3.org/2000/svg" width="17.838" height="17.838" viewBox="0 0 17.838 17.838">
+    <defs>
+        <style>
+                                                .cls-4-1 {
+                                                    fill: #ffd400;
+                                                }
+
+                                                .cls-4-2 {
+                                                    fill: #fdbf00;
+                                                }
+
+                                                .cls-4-3 {
+                                                    fill: #73bcff;
+                                                }
+
+                                                .cls-4-4 {
+                                                    fill: #0095ff;
+                                                }
+
+                                                .cls-4-5 {
+                                                    fill: #444;
+                                                }
+
+                                                .cls-4-6 {
+                                                    fill: #292929;
+                                                }
+
+                                                .cls-4-7 {
+                                                    fill: #5a5a5a;
+                                                }
+
+                                                .cls-4-8 {
+                                                    fill: #6e6e6e;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_120" data-name="Path 120" class="cls-4-1" d="M31,0V5.261h5.529l2.833,2.833V0Zm0,0" transform="translate(-29.92)" />
+    <path id="Path_121" data-name="Path 121" class="cls-4-2" d="M126.226,0V8.094l-2.833-2.833H121V0Zm0,0" transform="translate(-116.784)" />
+    <path id="Path_122" data-name="Path 122" class="cls-4-3" d="M274.136,241A3.145,3.145,0,0,0,271,244.136v1.045h6.271v-1.045A3.145,3.145,0,0,0,274.136,241Zm0,0" transform="translate(-261.558 -232.603)" />
+    <path id="Path_123" data-name="Path 123" class="cls-4-3" d="M303.09,121a2.09,2.09,0,1,0,2.09,2.09A2.1,2.1,0,0,0,303.09,121Zm0,0" transform="translate(-290.513 -116.784)" />
+    <path id="Path_124" data-name="Path 124" class="cls-4-4" d="M364.136,244.136v1.045H361V241A3.145,3.145,0,0,1,364.136,244.136Zm0,0" transform="translate(-348.423 -232.603)" />
+    <path id="Path_125" data-name="Path 125" class="cls-4-4" d="M361,125.181V121a2.09,2.09,0,1,1,0,4.181Zm0,0" transform="translate(-348.423 -116.784)" />
+    <path id="Path_126" data-name="Path 126" class="cls-4-5" d="M162.532,346v5.784H153.09L151,346Zm0,0" transform="translate(-145.739 -333.945)" />
+    <path id="Path_127" data-name="Path 127" class="cls-4-6" d="M361,346h4.216v5.784H361Zm0,0" transform="translate(-348.423 -333.945)" />
+    <path id="Path_128" data-name="Path 128" class="cls-4-7" d="M151,331h12.577v1.045H151Zm0,0" transform="translate(-145.739 -319.468)" />
+    <path id="Path_129" data-name="Path 129" class="cls-4-5" d="M361,331h5.261v1.045H361Zm0,0" transform="translate(-348.423 -319.468)" />
+    <path id="Path_130" data-name="Path 130" class="cls-4-7" d="M91,61h4.181v1.045H91Zm0,0" transform="translate(-87.829 -58.875)" />
+    <path id="Path_131" data-name="Path 131" class="cls-4-3" d="M34.136,301A3.145,3.145,0,0,0,31,304.136v1.045h6.271v-1.045A3.145,3.145,0,0,0,34.136,301Zm0,0" transform="translate(-29.92 -290.513)" />
+    <path id="Path_132" data-name="Path 132" class="cls-4-4" d="M124.136,304.136v1.045H121V301A3.145,3.145,0,0,1,124.136,304.136Zm0,0" transform="translate(-116.784 -290.513)" />
+    <path id="Path_133" data-name="Path 133" class="cls-4-3" d="M63.09,181a2.09,2.09,0,1,0,2.09,2.09A2.1,2.1,0,0,0,63.09,181Zm0,0" transform="translate(-58.875 -174.694)" />
+    <path id="Path_134" data-name="Path 134" class="cls-4-4" d="M121,185.181V181a2.09,2.09,0,1,1,0,4.181Zm0,0" transform="translate(-116.784 -174.694)" />
+    <path id="Path_135" data-name="Path 135" class="cls-4-8" d="M8.4,391l-1.045,4.216H1.08L0,391Zm0,0" transform="translate(0 -377.377)" />
+    <path id="Path_136" data-name="Path 136" class="cls-4-7" d="M125.181,391l-1.045,4.216H121V391Zm0,0" transform="translate(-116.784 -377.377)" />
+    <path id="Path_137" data-name="Path 137" class="cls-4-5" d="M121,61h3.136v1.045H121Zm0,0" transform="translate(-116.784 -58.875)" />
+</svg>

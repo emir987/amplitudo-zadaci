@@ -1,0 +1,56 @@
+<svg id="_005-magnifying-glass" data-name="005-magnifying-glass" 
+    xmlns="http://www.w3.org/2000/svg" width="21.532" height="21.532" viewBox="0 0 21.532 21.532">
+    <defs>
+        <style>
+                                                .cls-12-1 {
+                                                    fill: #5a5a5a;
+                                                }
+
+                                                .cls-12-2 {
+                                                    fill: #292929;
+                                                }
+
+                                                .cls-12-3 {
+                                                    fill: #6e6e6e;
+                                                }
+
+                                                .cls-12-4 {
+                                                    fill: #ede9e8;
+                                                }
+
+                                                .cls-12-5 {
+                                                    fill: #dfd7d5;
+                                                }
+
+                                                .cls-12-6 {
+                                                    fill: #73bcff;
+                                                }
+
+                                                .cls-12-7 {
+                                                    fill: #ff7816;
+                                                }
+
+                                                .cls-12-8 {
+                                                    fill: #dd3400;
+                                                }
+
+                                                .cls-12-9 {
+                                                    fill: #0095ff;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_170" data-name="Path 170" class="cls-12-1" d="M140.823,312.583l-1.728,1.716-.442-.442-.442-.442,1.716-1.728Zm0,0" transform="translate(-132.399 -298.58)" />
+    <path id="Path_171" data-name="Path 171" class="cls-12-2" d="M150.44,322.488l.442.441-1.728,1.716-.442-.442Zm0,0" transform="translate(-142.457 -308.926)" />
+    <path id="Path_172" data-name="Path 172" class="cls-12-3" d="M136.038,2.409a8.19,8.19,0,1,0,0,11.583A8.168,8.168,0,0,0,136.038,2.409Zm0,0" transform="translate(-116.915 0)" />
+    <path id="Path_173" data-name="Path 173" class="cls-12-1" d="M190.9,68.848a8.167,8.167,0,0,1-11.583,0L190.9,57.266A8.167,8.167,0,0,1,190.9,68.848Zm0,0" transform="translate(-171.772 -54.857)" />
+    <path id="Path_174" data-name="Path 174" class="cls-12-4" d="M163.789,31.923a6.941,6.941,0,1,0,0,9.816A6.937,6.937,0,0,0,163.789,31.923Zm0,0" transform="translate(-145.549 -28.632)" />
+    <path id="Path_175" data-name="Path 175" class="cls-12-5" d="M210.133,88.086a6.938,6.938,0,0,1-9.816,0l9.816-9.816A6.937,6.937,0,0,1,210.133,88.086Zm0,0" transform="translate(-191.892 -74.978)" />
+    <path id="Path_176" data-name="Path 176" class="cls-12-6" d="M259.543,59.969a2.523,2.523,0,1,0,0,5.047,2.36,2.36,0,0,0,.744-.114,2.554,2.554,0,0,0,1.665-1.665,2.359,2.359,0,0,0,.114-.744A2.531,2.531,0,0,0,259.543,59.969Zm0,0" transform="translate(-246.211 -57.447)" />
+    <path id="Path_177" data-name="Path 177" class="cls-12-6" d="M231.385,180.027a2.929,2.929,0,0,0-.581-.05,3.8,3.8,0,0,0-3.785,3.785v1.262h7.57v-1.262A3.787,3.787,0,0,0,231.385,180.027Zm0,0" transform="translate(-217.472 -172.408)" />
+    <path id="Path_178" data-name="Path 178" class="cls-12-7" d="M5.358,320.988,0,326.346l2.675,2.675,5.358-5.358Zm0,0" transform="translate(0 -307.49)" />
+    <path id="Path_179" data-name="Path 179" class="cls-12-8" d="M33.138,359.488,31.8,358.151l5.358-5.358L38.5,354.13Zm0,0" transform="translate(-30.463 -337.957)" />
+    <g id="Group_17" data-name="Group 17" transform="translate(9.547 5.79)">
+        <path id="Path_180" data-name="Path 180" class="cls-12-9" d="M336.392,137.672a2.554,2.554,0,0,1-1.665,1.665Zm0,0" transform="translate(-330.197 -137.672)" />
+        <path id="Path_181" data-name="Path 181" class="cls-12-9" d="M234.59,184.911v1.262h-7.57v-.631l4.366-4.366A3.787,3.787,0,0,1,234.59,184.911Zm0,0" transform="translate(-227.02 -179.346)" />
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+.close {
+    position: absolute;
+    right: 15px;
+    opacity: 1;
+}
+
+.modal-header {
+    padding-top: .5rem !important;
+    padding-bottom: .2rem !important;
+}
+
+.modal-header h5 {
+    color: white !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal-obrazovanje {
+    padding: 0 !important;
+}

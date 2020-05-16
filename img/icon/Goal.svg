@@ -1,0 +1,31 @@
+<svg id="_006-goal" data-name="006-goal" 
+    xmlns="http://www.w3.org/2000/svg" width="21.532" height="21.532" viewBox="0 0 21.532 21.532">
+    <defs>
+        <style>
+                                                .cls-13-1 {
+                                                    fill: #ff7816;
+                                                }
+
+                                                .cls-13-2 {
+                                                    fill: #6e6e6e;
+                                                }
+
+                                                .cls-13-3 {
+                                                    fill: #444;
+                                                }
+
+                                                .cls-13-4 {
+                                                    fill: #ffd400;
+                                                }
+
+                                                .cls-13-5 {
+                                                    fill: #fdbf00;
+                                                }
+        </style>
+    </defs>
+    <path id="Path_182" data-name="Path 182" class="cls-13-1" d="M256.989,6.35l.631-3.469L256.989,0h-7.2l3.154,3.2L249.789,6.35Zm0,0" transform="translate(-239.284)" />
+    <path id="Path_183" data-name="Path 183" class="cls-13-2" d="M421,0h1.262V11.4H421Zm0,0" transform="translate(-403.295)" />
+    <path id="Path_184" data-name="Path 184" class="cls-13-3" d="M436,0h.631V11.4H436Zm0,0" transform="translate(-417.664)" />
+    <path id="Path_185" data-name="Path 185" class="cls-13-4" d="M15.181,241v2.523H10.135v2.523H5.089v2.523H0V252.4H21.532V241Zm0,0" transform="translate(0 -230.865)" />
+    <path id="Path_186" data-name="Path 186" class="cls-13-5" d="M436,241h3.2v11.4H436Zm0,0" transform="translate(-417.664 -230.865)" />
+</svg>
