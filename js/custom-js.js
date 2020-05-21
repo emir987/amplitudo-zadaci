@@ -750,19 +750,32 @@
 
       let experienceHTML = ""
       for (const experience of experiences) {
+          const {
+              position,
+              employer,
+              city,
+              state,
+              aboutJob,
+              monthStart,
+              yearStart,
+              monthEnd,
+              yearEnd
+          } = experience;
+
           let date = "";
           if (experience.monthEnd == "x") {
-              date = `${experience.monthStart} ${experience.yearStart}`;
+              date = `${monthStart} ${yearStart}`;
           } else {
-              date = `${experience.monthStart} ${experience.yearStart} - ${experience.monthEnd} ${experience.yearEnd}`;
+              date = `${monthStart} ${yearStart} - ${monthEnd} ${yearEnd}`;
           }
+
           let oneExperience = `<div class="d-flex experience_output mt-3">
                                     <div id="show_experience_date" class="pr-4" style="width:37%">${date}</div>
                                     <div style="width:63%">
-                                        <span id="show_position">${experience.position}</span><span>, </span>
-                                        <span id="show_employer">${experience.employer}</span>
-                                        <div class="show_experience_location" id="show_experience_location">${experience.city}, ${experience.state}</div>
-                                        <span id="show_about_job" style="word-break: break-word;">${experience.aboutJob}</span>
+                                        <span id="show_position">${position}</span><span>, </span>
+                                        <span id="show_employer">${employer}</span>
+                                        <div class="show_experience_location" id="show_experience_location">${city}, ${state}</div>
+                                        <span id="show_about_job" style="word-break: break-word;">${aboutJob}</span>
                                     </div>
                                 </div>`
           experienceHTML += oneExperience;
