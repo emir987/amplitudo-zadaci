@@ -186,6 +186,20 @@
 
   });
 
+  $(function () {
+      $("#preffered-city").select2({
+          maximumSelectionLength: 3,
+          "language": {
+              "noResults": function (e) {
+                  return `Unesite najviše 3 grada`;
+              },
+              "maximumSelected": function (e) {
+                  return `Moguće je izabrati najviše 3 grada!`;
+              }
+          },
+      });
+  });
+
   $('#job-categories').select2({
 
       maximumSelectionLength: 3,
@@ -677,8 +691,14 @@
       //   no education added validate
       if (!validateAddedEducation(isEducation)) return;
 
-      //   no education added validate
+      //   no skills added validate
       if (!validateAddedSkills(isSkills)) return;
+
+      //   validate if skills are empty
+      const skills = document.getElementsByClassName('skill_name');
+      for (let skill of skills) {
+          if (!isEmpty(skill, "Unesite ime vještine", 2)) return;
+      }
 
       showData();
   });
@@ -700,7 +720,8 @@
       document.getElementById('show_zip').innerHTML = '<b>Poštanski broj:</b> ' + zip.value;
       document.getElementById('show_born_date').innerHTML = '<b>Datum rodjenja:</b> ' + document.getElementById('date').value + ". " + document.getElementById('month').value + " - " + document.getElementById('year').value + ".";
       document.getElementById('show_gender').innerHTML = '<b>Pol:</b> ' + document.getElementById('gender').value;
-      document.getElementById('show_foreign_languages').innerHTML = '<b>Strani jezici:</b> ' + $('#foreign-language').select2("val").join(', ');
+      const foreignLanguages = (noForeignLanguage.checked) ? '<b>Bez znanja stranih jezika</b>' : '<b>Strani jezici:</b> ' + $('#foreign-language').select2("val").join(', ');
+      document.getElementById('show_foreign_languages').innerHTML = foreignLanguages;
       document.getElementById('show_catogory_job').innerHTML = '<b>Kategorija poslova:</b> ' + $('#job-category').select2("val").join(', ');
       document.getElementById('show_preffered_city').innerHTML = '<b>Preferirani gradovi:</b> ' + $('#preffered-city').select2("val").join(', ');
 
@@ -745,6 +766,9 @@
                                     </div>
                                 </div>`
           experienceHTML += oneExperience;
+      }
+      if (experiences.length == 0) {
+
       }
       document.getElementById('show_experience_show').innerHTML = experienceHTML;
 
@@ -878,7 +902,13 @@
   }
 
   function validateMultiSelect(item) {
-      if (item.nextSibling.querySelectorAll('li').length >= 2 || (item.id == 'foreign-language' && noForeignLanguage.checked)) {
+
+      if (item.id == 'foreign-language' && noForeignLanguage.checked) {
+          removeInvaild(item.nextSibling);
+          return true;
+      }
+
+      if (item.nextSibling.querySelectorAll('li').length >= 2) {
           removeInvaild(item.nextSibling);
           return true;
       } else {
