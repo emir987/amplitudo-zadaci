@@ -247,7 +247,7 @@
   let educations = [];
   const editEducation = document.getElementById('edit-school');
 
-  function validateAddedEducation(element) {
+  function validateAddedSkills(element) {
       console.log(educations.length)
 
       const numberOfSkills = document.getElementById("skills-container").childElementCount;
