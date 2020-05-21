@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/select-2-custom.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/custom-checkbox.css">
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -66,6 +67,9 @@
             margin-top: 40px !important;
         }
 
+        .lbl {
+            font-size: 1.2em;
+        }
 
         .lbl::after {
             position: relative;
@@ -100,9 +104,15 @@
         <div class="fixed-top">
             <div class="d-flex justify-content-between pre-nav pt-1">
                 <div class="info ml-1">
-                    <div>info@mojposao.me</div>
-                    <div>+38267005622</div>
-                    <div>+38220331419</div>
+                    <div>
+                        <a style="color: white;" href="mailto:info@mojposao.me">info@mojposao.me</a>
+                    </div>
+                    <div>
+                        <a style="color: white;" href="tel:+38267005622">+38267005622</a>
+                    </div>
+                    <div>
+                        <a style="color: white;" href="tel:+38220331419">+38220331419</a>
+                    </div>
                 </div>
 
                 <div class="mx-3 icons-nav">
@@ -216,9 +226,10 @@
 
                                             <!-- hide default input -->
                                             <div style="height: 0; overflow: hidden;">
-                                                <input id="cv_file" type="file" id="cv_file" name='slika' accept="application/msword,
+                                                <input title="Dodajte CV" required data- id="cv_file" type="file"
+                                                    id="cv_file" name='slika' accept="application/msword,
                                                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
-                                                    application/pdf" />
+                                                    application/pdf" data-toggle="tooltip" data-placement="top" />
                                             </div>
 
                                             <span id="cv-text" class="mt-3">
@@ -254,10 +265,11 @@
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="gender">Pol</label>
-                                        <select class="js-example-basic-single select-main" name="gender" id="gender">
+                                        <select class="js-example-basic-single select-main" name="gender" id="gender"
+                                            data-error="Odaberite pol">
                                             <option value="0">Odaberi</option>
-                                            <option value="male">muški</option>
-                                            <option value="female">ženski</option>
+                                            <option value="muški">muški</option>
+                                            <option value="ženski">ženski</option>
                                         </select>
                                     </div>
                                 </div>
@@ -266,7 +278,8 @@
                                     <div class="row">
                                         <div class="col-4 pr-1 pl-2">
                                             <select id="date"
-                                                class="js-example-basic-single selection-style select-main" name="date">
+                                                class="js-example-basic-single selection-style select-main" name="date"
+                                                data-error="Odaberite datum">
                                                 <option value="0" disabled selected hidden>Dan</option>
                                                 <option value="01" name="dan">01</option>
                                                 <option value="02" name="dan">02</option>
@@ -302,24 +315,26 @@
                                             </select>
                                         </div>
                                         <div class="col-4 px-1">
-                                            <select id="month" class="js-example-basic-single select-main" name="month">
-                                                <option value="0" value="" disabled selected hidden>Mjesec</option>
-                                                <option value="01"> Januar </option>
-                                                <option value="02"> Februar </option>
-                                                <option value="03"> Mart </option>
-                                                <option value="04"> April </option>
-                                                <option value="05"> Maj </option>
-                                                <option value="06"> Jun </option>
-                                                <option value="07"> Jul </option>
-                                                <option value="08"> Avgust </option>
-                                                <option value="09"> Septembar </option>
-                                                <option value="10"> Oktobar </option>
-                                                <option value="11"> Novembar </option>
-                                                <option value="12"> Decembar </option>
+                                            <select id="month" class="js-example-basic-single select-main" name="month"
+                                                data-error="Odaberite mjesec">
+                                                <option value="0" disabled selected hidden>Mjesec</option>
+                                                <option value="Januar">Januar</option>
+                                                <option value="Februar">Februar</option>
+                                                <option value="Mart">Mart</option>
+                                                <option value="April">April</option>
+                                                <option value="Maj">Maj</option>
+                                                <option value="Jun">Jun</option>
+                                                <option value="Jul">Jul</option>
+                                                <option value="Avgust">Avgust</option>
+                                                <option value="Septembar">Septembar</option>
+                                                <option value="Oktobar">Oktobar</option>
+                                                <option value="Novembar">Novembar</option>
+                                                <option value="Decembar">Decembar</option>
                                             </select>
                                         </div>
                                         <div class="col-4 pl-1 pr-2">
-                                            <select id="year" class="js-example-basic-single select-main" name="year">
+                                            <select id="year" class="js-example-basic-single select-main" name="year"
+                                                data-error="Odaberite godinu">
                                                 <option value="0" disabled selected hidden>Godina</option>
                                                 <option value="1955" name="godina">1955</option>
                                                 <option value="1956" name="godina">1956</option>
@@ -376,7 +391,17 @@
                                                 <option value="2007" name="godina">2007</option>
                                                 <option value="2008" name="godina">2008</option>
                                                 <option value="2009" name="godina">2009</option>
-                                                <option value="20010" name="godina">2010</option>
+                                                <option value="2010" name="godina">2010</option>
+                                                <option value="2011" name="godina">2011</option>
+                                                <option value="2012" name="godina">2012</option>
+                                                <option value="2013" name="godina">2013</option>
+                                                <option value="2014" name="godina">2014</option>
+                                                <option value="2015" name="godina">2015</option>
+                                                <option value="2016" name="godina">2016</option>
+                                                <option value="2017" name="godina">2017</option>
+                                                <option value="2018" name="godina">2018</option>
+                                                <option value="2019" name="godina">2019</option>
+                                                <option value="2020" name="godina">2020</option>
                                             </select>
                                         </div>
                                     </div>
@@ -385,13 +410,15 @@
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="state">Država</label>
-                                        <select id="state" class="js-example-basic-single select-main" name="state">
+                                        <select onchange="selectCities(this, 1)" id="state-main-form"
+                                            class="js-example-basic-single select-main" name="state"
+                                            data-error="Odaberite državu">
                                             <option value="0" disabled selected>Država</option>
-                                            <option value="14">Bosna i Hercegovina</option>
-                                            <option value="15">China</option>
-                                            <option value="1">Crna Gora</option>
-                                            <option value="16">Francuska</option>
-                                            <option value="13">Srbija</option>
+                                            <option value="1">Bosna i Hercegovina</option>
+                                            <option value="2">China</option>
+                                            <option value="3">Crna Gora</option>
+                                            <option value="4">Francuska</option>
+                                            <option value="5">Srbija</option>
                                         </select>
                                     </div>
                                 </div>
@@ -399,10 +426,9 @@
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="ime lbl">Grad</label>
-                                        <select id="city" class="js-example-basic-single" disabled name="city">
-                                            <option value="AL">Odaberi</option>
-
-                                            <option value="WY">Wyoming</option>
+                                        <select id="city" class="js-example-basic-single select-main" disabled
+                                            name="city" data-error="Odaberite grad">
+                                            <option value="0" disabled selected hidden>Odaberi</option>
                                         </select>
                                     </div>
                                 </div>
@@ -410,8 +436,9 @@
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="zip">Poštanski broj</label>
-                                        <input type="text" class="form-control" name="zip" id="zip"
-                                            aria-describedby="helpId">
+                                        <input type="number" class="form-control" name="zip" id="zip"
+                                            aria-describedby="helpId" data-error="Poštanski broj mora imati 9 ili više
+                                            cifara">
                                     </div>
                                 </div>
 
@@ -419,7 +446,8 @@
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="zvanje">Zvanje</label>
                                         <select id="zvanje" name="zvanja[]"
-                                            class="inputi_s form-control js-example-tokenizer" multiple>
+                                            class="inputi_s form-control js-example-tokenizer multi-select" multiple
+                                            data-error="Unesite zvanje">
                                         </select>
                                         <div style="height:0px; width:0px; overflow:hidden; margin-top:-15px;">
                                             <input type='text' id="zvanje_input" name="zvanje_input" />
@@ -429,57 +457,71 @@
 
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
-                                        <label class="mr-1 lbl" for="total-experience">Ukupan broj godina radnog
+                                        <label class="mr-1 lbl" for="experience">Ukupan broj godina radnog
                                             iskustva</label>
-                                        <input type="text" class="form-control" name="total-experience"
-                                            id="total-experience" aria-describedby="helpId">
+                                        <input type="text" class="form-control" name="experience" id="experience"
+                                            aria-describedby="helpId" data-error="Unesite broj godina">
                                     </div>
                                 </div>
 
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="job-category">Kategorija poslova</label>
-                                        <select name="categories[]" id="job-category" class="js-example-basic-multiple"
-                                            multiple size="3">
-
-                                            <option value="2">Administracija</option>
-                                            <option value="3">Arhitektura </option>
-                                            <option value="4">IT, telekomunikacije </option>
-                                            <option value="5">Transport, i pomorstvo</option>
-                                            <option value="6">Dizajn</option>
-                                            <option value="7">Umjetnost, kultura, muzika</option>
-                                            <option value="8">Ekonomija, finansije i računovodstvo </option>
-                                            <option value="9">Poljoprivreda, šumarstvo, ribarstvo </option>
-                                            <option value="10">Pravo</option>
-                                            <option value="14">Bankarstvo</option>
-                                            <option value="15">Tehničke usluge, održavanje, popravke </option>
-                                            <option value="16">Web dizajn, programiranje </option>
-                                            <option value="17">HR-Ljudski resursi, edukacija</option>
-                                            <option value="18">Marketing, PR, mediji </option>
-                                            <option value="19">Obrazovanje, nauka</option>
-                                            <option value="20">Saobraćaj</option>
-                                            <option value="21">Medicina, zdravstvo, socijalni rad</option>
-                                            <option value="22">Poslovi u proizvodnji</option>
-                                            <option value="23">Lingvistika i kniževnost</option>
-                                            <option value="24">Poslovi obezbjeđenja, zaštite na radu</option>
-                                            <option value="26">Proizvodnja i zanatske usluge </option>
-                                            <option value="27">Logistika i skladištenje</option>
-                                            <option value="28">Briga o ljepoti</option>
-                                            <option value="29">Usluge čuvanja djece, starijih</option>
-                                            <option value="30">Turizam i ugostiteljstvo</option>
-                                            <option value="32">Elektrotehnika, mašinstvo </option>
-                                            <option value="34">Građevinarstvo, geodezija, geologija </option>
-                                            <option value="35">Hemija, fizika, matematika</option>
-                                            <option value="36">Osiguranje</option>
-                                            <option value="37">Psihologija, sociologija</option>
-                                            <option value="38">Rudarstvo</option>
-                                            <option value="39">Ostalo</option>
-                                            <option value="41">Farmacija</option>
-                                            <option value="42">Prehrambena tehnologija</option>
-                                            <option value="43">Rudarstvo, metalurgija</option>
-                                            <option value="45">Elektro i mašinsko održavanje</option>
-                                            <option value="46">Trgovina, prodaja</option>
-                                            <option value="47">Poslovanje nekretninama</option>
+                                        <select name="categories[]" id="job-category"
+                                            class="js-example-basic-multiple multi-select" multiple size="3"
+                                            data-error="Odaberite kategoriju">
+                                            <option value="Administracija">Administracija</option>
+                                            <option value="Arhitektura">Arhitektura </option>
+                                            <option value="IT, telekomunikacije">IT, telekomunikacije </option>
+                                            <option value="Transport, i pomorstvo">Transport, i pomorstvo</option>
+                                            <option value="Dizajn">Dizajn</option>
+                                            <option value="Umjetnost, kultura, muzika">Umjetnost, kultura, muzika
+                                            </option>
+                                            <option value="Ekonomija, finansije i računovodstvo">Ekonomija, finansije i
+                                                računovodstvo </option>
+                                            <option value="Poljoprivreda, šumarstvo, ribarstvo ">Poljoprivreda,
+                                                šumarstvo, ribarstvo </option>
+                                            <option value="Pravo">Pravo</option>
+                                            <option value="Bankarstvo">Bankarstvo</option>
+                                            <option value="Tehničke usluge, održavanje, popravke">Tehničke usluge,
+                                                održavanje, popravke </option>
+                                            <option value=">Web dizajn, programiranje">Web dizajn, programiranje
+                                            </option>
+                                            <option value=">HR-Ljudski resursi, edukacija">HR-Ljudski resursi, edukacija
+                                            </option>
+                                            <option value="Marketing, PR, mediji">Marketing, PR, mediji </option>
+                                            <option value="Obrazovanje, nauka">Obrazovanje, nauka</option>
+                                            <option value="Saobraćaj">Saobraćaj</option>
+                                            <option value="Medicina, zdravstvo, socijalni rad">Medicina, zdravstvo,
+                                                socijalni rad</option>
+                                            <option value="Poslovi u proizvodnji">Poslovi u proizvodnji</option>
+                                            <option value="Lingvistika i kniževnost">Lingvistika i kniževnost</option>
+                                            <option value="Poslovi obezbjeđenja, zaštite na radu">Poslovi obezbjeđenja,
+                                                zaštite na radu</option>
+                                            <option value="Proizvodnja i zanatske usluge">Proizvodnja i zanatske usluge
+                                            </option>
+                                            <option value="Logistika i skladištenje">Logistika i skladištenje</option>
+                                            <option value="Briga o ljepoti">Briga o ljepoti</option>
+                                            <option value="Usluge čuvanja djece, starijih">Usluge čuvanja djece,
+                                                starijih</option>
+                                            <option value="Turizam i ugostiteljstvo">Turizam i ugostiteljstvo</option>
+                                            <option value="Elektrotehnika, mašinstvo">Elektrotehnika, mašinstvo
+                                            </option>
+                                            <option value="Građevinarstvo, geodezija, geologija">Građevinarstvo,
+                                                geodezija, geologija </option>
+                                            <option value="Hemija, fizika, matematika">Hemija, fizika, matematika
+                                            </option>
+                                            <option value="Osiguranje">Osiguranje</option>
+                                            <option value="Psihologija, sociologija">Psihologija, sociologija</option>
+                                            <option value="Rudarstvo">Rudarstvo</option>
+                                            <option value="Ostalo">Ostalo</option>
+                                            <option value="Farmacija">Farmacija</option>
+                                            <option value="Prehrambena tehnologija">Prehrambena tehnologija</option>
+                                            <option value="Rudarstvo, metalurgija">Rudarstvo, metalurgija</option>
+                                            <option value="Elektro i mašinsko održavanje">Elektro i mašinsko održavanje
+                                            </option>
+                                            <option value="Trgovina, prodaja">Trgovina, prodaja</option>
+                                            <option value="Poslovanje nekretninama">Poslovanje nekretninama</option>
                                         </select>
 
                                     </div>
@@ -489,9 +531,10 @@
 
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
-                                        <label class="mr-1 lbl" for="prezime">Kontakt telefon</label>
-                                        <input type="text" class="form-control" name="zvanje" id="prezime"
-                                            aria-describedby="helpId">
+                                        <label class="mr-1 lbl" for="phone">Kontakt telefon</label>
+                                        <input id="phone" type="tel" class="form-control" name="phone"
+                                            aria-describedby="helpId" data-html="true" data-error="Unesite broj
+                                            telefona<br>+382 67/067-067">
                                     </div>
                                 </div>
 
@@ -510,34 +553,34 @@
                                                 posao
                                             </label>
                                         </div>
-                                        <select class="js-example-basic-multiple" name="preffered-city[]"
-                                            multiple="multiple">
-                                            <option value="1">Cetinje</option>
-                                            <option value="3">Andrijevica</option>
-                                            <option value="4">Herceg Novi</option>
-                                            <option value="5">Kotor</option>
-                                            <option value="7">Tivat</option>
-                                            <option value="8">Budva</option>
-                                            <option value="9">Nikšić</option>
-                                            <option value="10">Pljevlja</option>
-                                            <option value="11">Kolašin</option>
-                                            <option value="12">Bijelo Polje</option>
-                                            <option value="13">Rožaje</option>
-                                            <option value="14">Berane</option>
-                                            <option value="15">Plav</option>
-                                            <option value="16">Šavnik</option>
-                                            <option value="17">Petrovac</option>
-                                            <option value="18">Danilovgrad</option>
-                                            <option value="19">Žabljak</option>
-                                            <option value="20">Ulcinj</option>
-                                            <option value="21">Mojkovac</option>
-                                            <option value="22">Plužine</option>
-                                            <option value="23">Bar</option>
-                                            <option value="92">Podgorica</option>
-                                            <option value="111">Južna regija</option>
-                                            <option value="112">Centralna regija</option>
-                                            <option value="113">Sjeverna regija</option>
-                                            <option value="114">Kumbor</option>
+                                        <select id="preffered-city" class="js-example-basic-multiple multi-select"
+                                            name="preffered-city[]" multiple="multiple" data-error="Odaberite grad">
+                                            <option value="Cetinje">Cetinje</option>
+                                            <option value="Andrijevica">Andrijevica</option>
+                                            <option value="Herceg Novi">Herceg Novi</option>
+                                            <option value="Kotor">Kotor</option>
+                                            <option value="Tivat">Tivat</option>
+                                            <option value="Budva">Budva</option>
+                                            <option value="Nikšić">Nikšić</option>
+                                            <option value="Pljevlja">Pljevlja</option>
+                                            <option value="Kolašin">Kolašin</option>
+                                            <option value="Bijelo Polje">Bijelo Polje</option>
+                                            <option value="Rožaje">Rožaje</option>
+                                            <option value="Berane">Berane</option>
+                                            <option value="Plav">Plav</option>
+                                            <option value="Šavnik">Šavnik</option>
+                                            <option value="Petrovac">Petrovac</option>
+                                            <option value="Danilovgrad">Danilovgrad</option>
+                                            <option value="Žabljak">Žabljak</option>
+                                            <option value="Ulcinj">Ulcinj</option>
+                                            <option value="Mojkovac">Mojkovac</option>
+                                            <option value="Plužine">Plužine</option>
+                                            <option value="Bar">Bar</option>
+                                            <option value="Podgorica">Podgorica</option>
+                                            <option value="Južna regija">Južna regija</option>
+                                            <option value="Centralna regija">Centralna regija</option>
+                                            <option value="Sjeverna regija">Sjeverna regija</option>
+                                            <option value="Kumbor">Kumbor</option>
                                         </select>
                                     </div>
                                 </div>
@@ -550,11 +593,12 @@
                                             </div>
                                             <div>
                                                 <span>Bez znanja stranih jezika </span>
-                                                <input type="checkbox">
+                                                <input id="no-foreign-language" type="checkbox">
                                             </div>
                                         </div>
-                                        <select class="js-example-basic-single selectpicker" name="foreign_languages[]"
-                                            multiple>
+                                        <select id="foreign-language"
+                                            class="js-example-basic-single selectpicker multi-select"
+                                            name="foreign_languages[]" multiple data-error="Unesite strani jezik">
                                             <option value="Engleski jezik">Engleski jezik</option>
                                             <option value="Ruski jezik">Ruski jezik</option>
                                             <option value="Italijanski jezik">Italijanski jezik</option>
@@ -578,7 +622,7 @@
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="driving-licence">Vozačka dozvola</label>
                                         <select id="driving-licence" class="js-example-basic-single  select-main"
-                                            name="driving-licence">
+                                            name="driving-licence" data-error="Odaberite nivo vozačke dozvole">
                                             <option value="0" disabled selected hidden>Odaberi</option>
                                             <option value="B">B</option>
                                             <option value="C">C</option>
@@ -594,10 +638,13 @@
                     </div>
                 </div>
 
+
                 <div class="section-2 py-4">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-12 p-2">
+
+
+                        <div style="display: inline-block;" class="w-100">
+                            <div class="w-50 pr-2 response-mobile" style="float: left;">
                                 <div class="section-2-input radno-iskustvo">
                                     <div>
                                         <span class="mr-1 lbl">Radno iskustvo</span>
@@ -607,570 +654,52 @@
                                             iskustvo</span>
                                     </div>
                                 </div>
-                            </div>
-
-
-                            <!-- modal radno iskustvo start -->
-                            <div class="modal fade modal-radno-iskustvo" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-md">
-                                    <div class="modal-content">
-                                        <div class="modal-header"
-                                            style="background-color: rgb(241,89,42); position: relative;">
-                                            <h5 class="col-12">RADNO ISKUSTVO</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span style="color: white;" aria-hidden="true"><img src="img/iks.png"
-                                                        alt=""></span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl"
-                                                            for="experience-position">Pozicija</label>
-                                                        <input type="text" class="form-control"
-                                                            name="experience-position" id="experience-position"
-                                                            aria-describedby="helpId">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="employer">Poslodavac</label>
-                                                        <input type="text" class="form-control" name="employer"
-                                                            id="employer" aria-describedby=" helpId">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="state-experience">Država</label>
-                                                        <select id="state-experience" class="js-example-basic-single"
-                                                            name="state-experience">
-                                                            <option value="0" disabled selected>Država</option>
-                                                            <option value="2">Crna Gora</option>
-                                                            <option value="3">Srbija</option>
-                                                            <option value="4">Bosna i Hercegovina</option>
-                                                            <option value="5">China</option>
-                                                            <option value="6">Francuska</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="city-experience">Grad</label>
-                                                        <select id="city-experience" class="js-example-basic-single"
-                                                            disabled name="city-school" name="city-experience">
-                                                            <option value="AL">Odaberi</option>
-                                                            <option value="WY">Wyoming</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <span for="month-experience-start" class="mr-1 lbl">Početak
-                                                            rada</span>
-                                                        <select id=" month-experience-start"
-                                                            class="js-example-basic-single"
-                                                            name="month-experience-start">
-                                                            <option value="0" value="" disabled selected hidden>Mjesec
-                                                            </option>
-                                                            <option value="01"> Januar </option>
-                                                            <option value="02"> Februar </option>
-                                                            <option value="03"> Mart </option>
-                                                            <option value="04"> April </option>
-                                                            <option value="05"> Maj </option>
-                                                            <option value="06"> Jun </option>
-                                                            <option value="07"> Jul </option>
-                                                            <option value="08"> Avgust </option>
-                                                            <option value="09"> Septembar </option>
-                                                            <option value="10"> Oktobar </option>
-                                                            <option value="11"> Novembar </option>
-                                                            <option value="12"> Decembar </option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <span style="visibility: hidden;"
-                                                            class="mr-1 lbl">Početak</span>
-                                                        <select id="year-experience-start"
-                                                            class="js-example-basic-single" name="year-experience-start"
-                                                            class="inputi_s form-control js-example-basic-single">
-                                                            <option value="choose" disabled selected hidden>Godina
-                                                            </option>
-                                                            <option value="1955" name="godina">1955</option>
-                                                            <option value="1956" name="godina">1956</option>
-                                                            <option value="1957" name="godina">1957</option>
-                                                            <option value="1958" name="godina">1958</option>
-                                                            <option value="1959" name="godina">1959</option>
-                                                            <option value="1960" name="godina">1960</option>
-                                                            <option value="1961" name="godina">1961</option>
-                                                            <option value="1962" name="godina">1962</option>
-                                                            <option value="1963" name="godina">1963</option>
-                                                            <option value="1964" name="godina">1964</option>
-                                                            <option value="1965" name="godina">1965</option>
-                                                            <option value="1966" name="godina">1966</option>
-                                                            <option value="1967" name="godina">1967</option>
-                                                            <option value="1968" name="godina">1968</option>
-                                                            <option value="1969" name="godina">1969</option>
-                                                            <option value="1970" name="godina">1970</option>
-                                                            <option value="1971" name="godina">1971</option>
-                                                            <option value="1972" name="godina">1972</option>
-                                                            <option value="1973" name="godina">1973</option>
-                                                            <option value="1974" name="godina">1974</option>
-                                                            <option value="1975" name="godina">1975</option>
-                                                            <option value="1976" name="godina">1976</option>
-                                                            <option value="1977" name="godina">1977</option>
-                                                            <option value="1978" name="godina">1978</option>
-                                                            <option value="1979" name="godina">1979</option>
-                                                            <option value="1980" name="godina">1980</option>
-                                                            <option value="1981" name="godina">1981</option>
-                                                            <option value="1982" name="godina">1982</option>
-                                                            <option value="1983" name="godina">1983</option>
-                                                            <option value="1984" name="godina">1984</option>
-                                                            <option value="1985" name="godina">1985</option>
-                                                            <option value="1986" name="godina">1986</option>
-                                                            <option value="1987" name="godina">1987</option>
-                                                            <option value="1988" name="godina">1988</option>
-                                                            <option value="1989" name="godina">1989</option>
-                                                            <option value="1990" name="godina">1990</option>
-                                                            <option value="1991" name="godina">1991</option>
-                                                            <option value="1992" name="godina">1992</option>
-                                                            <option value="1993" name="godina">1993</option>
-                                                            <option value="1994" name="godina">1994</option>
-                                                            <option value="1995" name="godina">1995</option>
-                                                            <option value="1996" name="godina">1996</option>
-                                                            <option value="1997" name="godina">1997</option>
-                                                            <option value="1998" name="godina">1998</option>
-                                                            <option value="1999" name="godina">1999</option>
-                                                            <option value="2000" name="godina">2000</option>
-                                                            <option value="2001" name="godina">2001</option>
-                                                            <option value="2002" name="godina">2002</option>
-                                                            <option value="2003" name="godina">2003</option>
-                                                            <option value="2004" name="godina">2004</option>
-                                                            <option value="2005" name="godina">2005</option>
-                                                            <option value="2006" name="godina">2006</option>
-                                                            <option value="2007" name="godina">2007</option>
-                                                            <option value="2008" name="godina">2008</option>
-                                                            <option value="2009" name="godina">2009</option>
-                                                            <option value="20010" name="godina">2010</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <span class="mr-1 lbl" for="month-experience-end">Završetak
-                                                            rada</span>
-                                                        <select id="month-experience-end"
-                                                            class="js-example-basic-single" name="month-end">
-                                                            <option value="0" disabled selected hidden>Mjesec
-                                                            </option>
-                                                            <option value="01"> Januar </option>
-                                                            <option value="02"> Februar </option>
-                                                            <option value="03"> Mart </option>
-                                                            <option value="04"> April </option>
-                                                            <option value="05"> Maj </option>
-                                                            <option value="06"> Jun </option>
-                                                            <option value="07"> Jul </option>
-                                                            <option value="08"> Avgust </option>
-                                                            <option value="09"> Septembar </option>
-                                                            <option value="10"> Oktobar </option>
-                                                            <option value="11"> Novembar </option>
-                                                            <option value="12"> Decembar </option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <span style="visibility: hidden;"
-                                                            class="mr-1 lbl">Početak</span>
-                                                        <select id="year-experience-end" class="js-example-basic-single"
-                                                            name="year-experience-end"
-                                                            class="inputi_s form-control js-example-basic-single">
-                                                            <option value="choose" disabled selected hidden>Godina
-                                                            </option>
-                                                            <option value="1955" name="godina">1955</option>
-                                                            <option value="1956" name="godina">1956</option>
-                                                            <option value="1957" name="godina">1957</option>
-                                                            <option value="1958" name="godina">1958</option>
-                                                            <option value="1959" name="godina">1959</option>
-                                                            <option value="1960" name="godina">1960</option>
-                                                            <option value="1961" name="godina">1961</option>
-                                                            <option value="1962" name="godina">1962</option>
-                                                            <option value="1963" name="godina">1963</option>
-                                                            <option value="1964" name="godina">1964</option>
-                                                            <option value="1965" name="godina">1965</option>
-                                                            <option value="1966" name="godina">1966</option>
-                                                            <option value="1967" name="godina">1967</option>
-                                                            <option value="1968" name="godina">1968</option>
-                                                            <option value="1969" name="godina">1969</option>
-                                                            <option value="1970" name="godina">1970</option>
-                                                            <option value="1971" name="godina">1971</option>
-                                                            <option value="1972" name="godina">1972</option>
-                                                            <option value="1973" name="godina">1973</option>
-                                                            <option value="1974" name="godina">1974</option>
-                                                            <option value="1975" name="godina">1975</option>
-                                                            <option value="1976" name="godina">1976</option>
-                                                            <option value="1977" name="godina">1977</option>
-                                                            <option value="1978" name="godina">1978</option>
-                                                            <option value="1979" name="godina">1979</option>
-                                                            <option value="1980" name="godina">1980</option>
-                                                            <option value="1981" name="godina">1981</option>
-                                                            <option value="1982" name="godina">1982</option>
-                                                            <option value="1983" name="godina">1983</option>
-                                                            <option value="1984" name="godina">1984</option>
-                                                            <option value="1985" name="godina">1985</option>
-                                                            <option value="1986" name="godina">1986</option>
-                                                            <option value="1987" name="godina">1987</option>
-                                                            <option value="1988" name="godina">1988</option>
-                                                            <option value="1989" name="godina">1989</option>
-                                                            <option value="1990" name="godina">1990</option>
-                                                            <option value="1991" name="godina">1991</option>
-                                                            <option value="1992" name="godina">1992</option>
-                                                            <option value="1993" name="godina">1993</option>
-                                                            <option value="1994" name="godina">1994</option>
-                                                            <option value="1995" name="godina">1995</option>
-                                                            <option value="1996" name="godina">1996</option>
-                                                            <option value="1997" name="godina">1997</option>
-                                                            <option value="1998" name="godina">1998</option>
-                                                            <option value="1999" name="godina">1999</option>
-                                                            <option value="2000" name="godina">2000</option>
-                                                            <option value="2001" name="godina">2001</option>
-                                                            <option value="2002" name="godina">2002</option>
-                                                            <option value="2003" name="godina">2003</option>
-                                                            <option value="2004" name="godina">2004</option>
-                                                            <option value="2005" name="godina">2005</option>
-                                                            <option value="2006" name="godina">2006</option>
-                                                            <option value="2007" name="godina">2007</option>
-                                                            <option value="2008" name="godina">2008</option>
-                                                            <option value="2009" name="godina">2009</option>
-                                                            <option value="20010" name="godina">2010</option>
-                                                        </select>
-                                                    </div>
-
-
-                                                </div>
-
-                                                <div id="currently-working-space" class="col-0 col-md-6 px-1"></div>
-
-                                                <div class="col-12 col-md-6 px-1">
-                                                    <input type="checkbox"><span>Trenutno radim ovdje</span>
-                                                </div>
-
-                                                <div class="col-12 px-1">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="experience-about-job">Opis
-                                                            posla</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                            rows="5"></textarea>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="d-flex justify-content-center">
-                                                <button id="add-experience" style="width: 40%;"
-                                                    class="btn-kreiraj">Dodaj</button>
-                                            </div>
-                                        </div>
-
+                                <div class="bez-iskustva mb-3">
+                                    <div id="hide-no-experience">
+                                        <label style="cursor: pointer;" for="no-experience" class="pl-4 mb-0 pr-1">Bez
+                                            iskustva</label>
+                                        <input id="no-experience" type="checkbox" style="transform: translateY(3px);"
+                                            data-error="Odaberite ukoliko nemate radnog iskustva.">
                                     </div>
+                                    <div class="mt-2" id="iskustvo"></div>
                                 </div>
                             </div>
-                            <!-- modal radno iskustvo end -->
 
-
-
-                            <div class="col-md-6 col-12 p-2 order-md-1 order-2">
-                                <div class="section-2-input ">
-                                    <div>
-                                        <span class="mr-1 lbl">Obrazovanje</span>
+                            <div class="w-50 pl-2 response-mobile" style="float: left;">
+                                <div class="w-100">
+                                    <div class="section-2-input ">
+                                        <div>
+                                            <span class="mr-1 lbl">Obrazovanje</span>
+                                        </div>
+                                        <div id="educationModal" data-toggle="modal" data-target=".modal-obrazovanje">
+                                            <img class="dodaj" src="img/plus-c.png"><span id="dodaj-iskustvo"
+                                                data-toggle="tooltip" data-placement="top"
+                                                data-error="Odaberite ukoliko nemate radnog iskustva."
+                                                class="ml-1 dodaj">Dodaj
+                                                obrazovanje</span>
+                                        </div>
                                     </div>
-                                    <div data-toggle="modal" data-target=".modal-obrazovanje">
-                                        <img class="dodaj" src="img/plus-c.png"><span class="ml-1 dodaj">Dodaj
-                                            obrazovanje</span>
+                                    <div class="mt-2" id="education"></div>
+                                </div>
+
+
+
+                                <div class="w-100 mobile-margin">
+                                    <div class="section-2-input ">
+                                        <div>
+                                            <label class="mr-1 lbl" for="skills">Vještine</label>
+                                        </div>
+                                        <div id="add-skills" data-toggle="tooltip" data-placement="top"
+                                            data-error="Odaberite bar jednu vještinu.">
+                                            <img class="dodaj" src="img/plus-c.png">
+                                            <span class="ml-1 dodaj" id="skills">Dodaj vještine</span>
+                                        </div>
                                     </div>
+                                    <div id="skills-container" class=""></div>
                                 </div>
                             </div>
 
 
-                            <!-- modal radno iskustvo start -->
-                            <div class="modal fade modal-obrazovanje tabindex=" -1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog modal-md">
-                                    <div class="modal-content">
-                                        <div class="modal-header"
-                                            style="background-color: rgb(241,89,42); position: relative;">
-                                            <h5 class="col-12">OBRAZOVANJE</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span style="color: white;" aria-hidden="true"><img src="img/iks.png"
-                                                        alt=""></span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="school-fax">Škola/Fakultet</label>
-                                                        <input type="text" class="form-control" name="school-fax"
-                                                            id="school-fax" aria-describedby="helpId">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="level">Stepen</label>
-                                                        <input type="text" class="form-control" name="level" id="level"
-                                                            aria-describedby=" helpId">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="state-school">Država</label>
-                                                        <select id="state-school" class="js-example-basic-single"
-                                                            name="state-school">
-                                                            <option value="1" disabled selected>Država</option>
-                                                            <option value="2">Crna Gora</option>
-                                                            <option value="3">Srbija</option>
-                                                            <option value="4">Bosna i Hercegovina</option>
-                                                            <option value="5">China</option>
-                                                            <option value="6">Francuska</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-md-6 px-2">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="city-school">Grad</label>
-                                                        <select id="city-school" class="js-example-basic-single"
-                                                            disabled name="city-school">
-                                                            <option value="AL">Odaberi</option>
-                                                            <option value="WY">Wyoming</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="month-start">Početak</label>
-                                                        <select id=" month-start" class="js-example-basic-single"
-                                                            name="month-start">
-                                                            <option value="0" value="" disabled selected hidden>Mjesec
-                                                            </option>
-                                                            <option value="01"> Januar </option>
-                                                            <option value="02"> Februar </option>
-                                                            <option value="03"> Mart </option>
-                                                            <option value="04"> April </option>
-                                                            <option value="05"> Maj </option>
-                                                            <option value="06"> Jun </option>
-                                                            <option value="07"> Jul </option>
-                                                            <option value="08"> Avgust </option>
-                                                            <option value="09"> Septembar </option>
-                                                            <option value="10"> Oktobar </option>
-                                                            <option value="11"> Novembar </option>
-                                                            <option value="12"> Decembar </option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <label style="visibility: hidden;" class="mr-1 lbl"
-                                                            for="year-start">Početak</label>
-                                                        <select id="year-start" class="js-example-basic-single"
-                                                            name="year-start"
-                                                            class="inputi_s form-control js-example-basic-single">
-                                                            <option value="choose" disabled selected hidden>Godina
-                                                            </option>
-                                                            <option value="1955" name="godina">1955</option>
-                                                            <option value="1956" name="godina">1956</option>
-                                                            <option value="1957" name="godina">1957</option>
-                                                            <option value="1958" name="godina">1958</option>
-                                                            <option value="1959" name="godina">1959</option>
-                                                            <option value="1960" name="godina">1960</option>
-                                                            <option value="1961" name="godina">1961</option>
-                                                            <option value="1962" name="godina">1962</option>
-                                                            <option value="1963" name="godina">1963</option>
-                                                            <option value="1964" name="godina">1964</option>
-                                                            <option value="1965" name="godina">1965</option>
-                                                            <option value="1966" name="godina">1966</option>
-                                                            <option value="1967" name="godina">1967</option>
-                                                            <option value="1968" name="godina">1968</option>
-                                                            <option value="1969" name="godina">1969</option>
-                                                            <option value="1970" name="godina">1970</option>
-                                                            <option value="1971" name="godina">1971</option>
-                                                            <option value="1972" name="godina">1972</option>
-                                                            <option value="1973" name="godina">1973</option>
-                                                            <option value="1974" name="godina">1974</option>
-                                                            <option value="1975" name="godina">1975</option>
-                                                            <option value="1976" name="godina">1976</option>
-                                                            <option value="1977" name="godina">1977</option>
-                                                            <option value="1978" name="godina">1978</option>
-                                                            <option value="1979" name="godina">1979</option>
-                                                            <option value="1980" name="godina">1980</option>
-                                                            <option value="1981" name="godina">1981</option>
-                                                            <option value="1982" name="godina">1982</option>
-                                                            <option value="1983" name="godina">1983</option>
-                                                            <option value="1984" name="godina">1984</option>
-                                                            <option value="1985" name="godina">1985</option>
-                                                            <option value="1986" name="godina">1986</option>
-                                                            <option value="1987" name="godina">1987</option>
-                                                            <option value="1988" name="godina">1988</option>
-                                                            <option value="1989" name="godina">1989</option>
-                                                            <option value="1990" name="godina">1990</option>
-                                                            <option value="1991" name="godina">1991</option>
-                                                            <option value="1992" name="godina">1992</option>
-                                                            <option value="1993" name="godina">1993</option>
-                                                            <option value="1994" name="godina">1994</option>
-                                                            <option value="1995" name="godina">1995</option>
-                                                            <option value="1996" name="godina">1996</option>
-                                                            <option value="1997" name="godina">1997</option>
-                                                            <option value="1998" name="godina">1998</option>
-                                                            <option value="1999" name="godina">1999</option>
-                                                            <option value="2000" name="godina">2000</option>
-                                                            <option value="2001" name="godina">2001</option>
-                                                            <option value="2002" name="godina">2002</option>
-                                                            <option value="2003" name="godina">2003</option>
-                                                            <option value="2004" name="godina">2004</option>
-                                                            <option value="2005" name="godina">2005</option>
-                                                            <option value="2006" name="godina">2006</option>
-                                                            <option value="2007" name="godina">2007</option>
-                                                            <option value="2008" name="godina">2008</option>
-                                                            <option value="2009" name="godina">2009</option>
-                                                            <option value="20010" name="godina">2010</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <label class="mr-1 lbl" for="month-end">Završetak</label>
-                                                        <select id="month-end" class="js-example-basic-single"
-                                                            name="month-end">
-                                                            <option value="0" value="" disabled selected hidden>Mjesec
-                                                            </option>
-                                                            <option value="01"> Januar </option>
-                                                            <option value="02"> Februar </option>
-                                                            <option value="03"> Mart </option>
-                                                            <option value="04"> April </option>
-                                                            <option value="05"> Maj </option>
-                                                            <option value="06"> Jun </option>
-                                                            <option value="07"> Jul </option>
-                                                            <option value="08"> Avgust </option>
-                                                            <option value="09"> Septembar </option>
-                                                            <option value="10"> Oktobar </option>
-                                                            <option value="11"> Novembar </option>
-                                                            <option value="12"> Decembar </option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 col-md-3 px-1">
-                                                    <div class="form-group">
-                                                        <label style="visibility: hidden;" class="mr-1 lbl"
-                                                            for="year-end">Početak</label>
-                                                        <select id="year-end" class="js-example-basic-single"
-                                                            name="year-end"
-                                                            class="inputi_s form-control js-example-basic-single">
-                                                            <option value="choose" disabled selected hidden>Godina
-                                                            </option>
-                                                            <option value="1955" name="godina">1955</option>
-                                                            <option value="1956" name="godina">1956</option>
-                                                            <option value="1957" name="godina">1957</option>
-                                                            <option value="1958" name="godina">1958</option>
-                                                            <option value="1959" name="godina">1959</option>
-                                                            <option value="1960" name="godina">1960</option>
-                                                            <option value="1961" name="godina">1961</option>
-                                                            <option value="1962" name="godina">1962</option>
-                                                            <option value="1963" name="godina">1963</option>
-                                                            <option value="1964" name="godina">1964</option>
-                                                            <option value="1965" name="godina">1965</option>
-                                                            <option value="1966" name="godina">1966</option>
-                                                            <option value="1967" name="godina">1967</option>
-                                                            <option value="1968" name="godina">1968</option>
-                                                            <option value="1969" name="godina">1969</option>
-                                                            <option value="1970" name="godina">1970</option>
-                                                            <option value="1971" name="godina">1971</option>
-                                                            <option value="1972" name="godina">1972</option>
-                                                            <option value="1973" name="godina">1973</option>
-                                                            <option value="1974" name="godina">1974</option>
-                                                            <option value="1975" name="godina">1975</option>
-                                                            <option value="1976" name="godina">1976</option>
-                                                            <option value="1977" name="godina">1977</option>
-                                                            <option value="1978" name="godina">1978</option>
-                                                            <option value="1979" name="godina">1979</option>
-                                                            <option value="1980" name="godina">1980</option>
-                                                            <option value="1981" name="godina">1981</option>
-                                                            <option value="1982" name="godina">1982</option>
-                                                            <option value="1983" name="godina">1983</option>
-                                                            <option value="1984" name="godina">1984</option>
-                                                            <option value="1985" name="godina">1985</option>
-                                                            <option value="1986" name="godina">1986</option>
-                                                            <option value="1987" name="godina">1987</option>
-                                                            <option value="1988" name="godina">1988</option>
-                                                            <option value="1989" name="godina">1989</option>
-                                                            <option value="1990" name="godina">1990</option>
-                                                            <option value="1991" name="godina">1991</option>
-                                                            <option value="1992" name="godina">1992</option>
-                                                            <option value="1993" name="godina">1993</option>
-                                                            <option value="1994" name="godina">1994</option>
-                                                            <option value="1995" name="godina">1995</option>
-                                                            <option value="1996" name="godina">1996</option>
-                                                            <option value="1997" name="godina">1997</option>
-                                                            <option value="1998" name="godina">1998</option>
-                                                            <option value="1999" name="godina">1999</option>
-                                                            <option value="2000" name="godina">2000</option>
-                                                            <option value="2001" name="godina">2001</option>
-                                                            <option value="2002" name="godina">2002</option>
-                                                            <option value="2003" name="godina">2003</option>
-                                                            <option value="2004" name="godina">2004</option>
-                                                            <option value="2005" name="godina">2005</option>
-                                                            <option value="2006" name="godina">2006</option>
-                                                            <option value="2007" name="godina">2007</option>
-                                                            <option value="2008" name="godina">2008</option>
-                                                            <option value="2009" name="godina">2009</option>
-                                                            <option value="20010" name="godina">2010</option>
-                                                        </select>
-                                                    </div>
-
-
-                                                </div>
-
-                                            </div>
-                                            <div class="d-flex justify-content-center">
-                                                <button id="add-school" style="width: 40%;"
-                                                    class="btn-kreiraj">Dodaj</button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- modal radno iskustvo end -->
-
-
-                            <div class="col-md-6 col-12 pl-4 order-md-2 order-1 bez-iskustva pt-0">
-                                <span>Bez iskustva</span>
-                                <input type="checkbox">
-                            </div>
-
-                            <div class="col-md-6 col-12 p-2 order-4">
-                                <div class="section-2-input ">
-                                    <div>
-                                        <label class="mr-1 lbl" for="skills">Vještine</label>
-                                    </div>
-                                    <div id="add-skills">
-                                        <img class="dodaj" src="img/plus-c.png"><label class="ml-1 dodaj"
-                                            for="skills">Dodaj
-                                            vještine</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-6 order-5"></div>
-
-                            <div id="skills-container" class="col-6 order-6"></div>
                         </div>
                     </div>
                 </div>
@@ -1182,23 +711,24 @@
                         <div class="col-md-4 col-12 pr-1 pl-2">
                             <div class="form-group">
                                 <label class="mr-1 lbl" for="name">eMail</label>
-                                <input type="text" class="form-control" name="email" id="email"
-                                    aria-describedby="helpId">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    aria-describedby="helpId" data-error="Unesite ispravan email">
                             </div>
                         </div>
 
                         <div class="col-md-4 col-12 pr-1 pl-2">
                             <div class="form-group">
                                 <label class="mr-1 lbl" for="name">Lozinka</label>
-                                <input type="text" class="form-control" name="pw" id="pw" aria-describedby="helpId">
+                                <input type="password" class="form-control" name="pw" id="pw"
+                                    data-error="Lozinka mora biti dugacka od 6 do 30 karaktera">
                             </div>
                         </div>
 
                         <div class="col-md-4 col-12 pr-1 pl-2">
                             <div class="form-group">
                                 <label class="mr-1 lbl" for="name">Ponovi lozinku</label>
-                                <input type="text" class="form-control" name="repeat-pw" id="repeat-pw"
-                                    aria-describedby="helpId" placeholder="">
+                                <input type="password" class="form-control" name="repeat-pw" id="repeat-pw"
+                                    aria-describedby="helpId" data-error="Lozinka mora biti ista">
                             </div>
                         </div>
                     </div>
@@ -1207,15 +737,590 @@
                 <div class="section-uslovi-koriscenja">
                     <div>Uslovi korišćenja</div>
                     <div class="d-flex justify-content-center mt-2 mb-4">
-                        <input type="checkbox" class="align-self-center mx-1" checked>
-                        <div>Prihvatam uslove korišćenja</div>
+                        <input id="accept-terms" type="checkbox" class="align-self-center mx-1" checked
+                            data-error="Morate prihvatiti uslove korišćenja">
+                        <label style="margin-bottom: 0;" for="accept-terms">Prihvatam uslove korišćenja</label>
                     </div>
                     <input type="submit" value="Kreiraj nalog" class="btn-kreiraj">
                 </div>
             </form>
-
         </div>
 
+
+        <!-- modal radno iskustvo start -->
+        <div class="modal fade modal-radno-iskustvo" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 700px;">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(241,89,42); position: relative;">
+                        <h5 class="col-12">RADNO ISKUSTVO</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span style="color: white;" aria-hidden="true"><img src="img/iks.png" alt=""></span>
+                        </button>
+                    </div>
+                    <div class="modal-body px-4" id="modal-experience-body">
+                        <form method="POST" action="" id="form-work-experience">
+
+                            <div class="row">
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="experience-position">Pozicija</label>
+                                        <input type="text" class="form-control" name="experience-position"
+                                            id="experience-position" aria-describedby="helpId">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="employer">Poslodavac</label>
+                                        <input type="text" class="form-control" name="employer" id="employer"
+                                            aria-describedby=" helpId">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="state-experience">Država</label>
+                                        <select onchange="selectCities(this, 2)" data-error=" Unesite državu"
+                                            id="state-experience" class="js-example-basic-single select-experience"
+                                            name="state-experience">
+                                            <option value="0" disabled selected>Država</option>
+                                            <option value="Crna Gora">Crna Gora</option>
+                                            <option value="Srbija">Srbija</option>
+                                            <option value="Bosna i Hercegovina">Bosna i Hercegovina</option>
+                                            <option value="China">China</option>
+                                            <option value="Francuska">Francuska</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="city-experience">Grad</label>
+                                        <select id="city-experience" class="js-example-basic-single select-experience"
+                                            disabled name="city-school" name="city-experience"
+                                            data-error="Unesite grad">
+                                            <option value="0">Odaberi</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label for="month-experience-start" class="mr-1 lbl">Početak
+                                            rada</label>
+                                        <select id="month-experience-start"
+                                            class="js-example-basic-single select-experience"
+                                            name="month-experience-start" data-error="Unesite mjesec">
+                                            <option value="0" disabled selected hidden>Mjesec</option>
+                                            <option value="Januar">Januar</option>
+                                            <option value="Februar">Februar</option>
+                                            <option value="Mart">Mart</option>
+                                            <option value="April">April</option>
+                                            <option value="Maj">Maj</option>
+                                            <option value="Jun">Jun</option>
+                                            <option value="Jul">Jul</option>
+                                            <option value="Avgust">Avgust</option>
+                                            <option value="Septembar">Septembar</option>
+                                            <option value="Oktobar">Oktobar</option>
+                                            <option value="Novembar">Novembar</option>
+                                            <option value="Decembar">Decembar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label style="visibility: hidden;" class="mr-1 lbl">Početak</label>
+                                        <select id="year-experience-start"
+                                            class="js-example-basic-single select-experience"
+                                            name="year-experience-start" data-error="Unesite godinu"
+                                            class="inputi_s form-control js-example-basic-single">
+                                            <option value="0" disabled selected hidden>Godina
+                                            </option>
+                                            <option value="1955" name="godina">1955</option>
+                                            <option value="1956" name="godina">1956</option>
+                                            <option value="1957" name="godina">1957</option>
+                                            <option value="1958" name="godina">1958</option>
+                                            <option value="1959" name="godina">1959</option>
+                                            <option value="1960" name="godina">1960</option>
+                                            <option value="1961" name="godina">1961</option>
+                                            <option value="1962" name="godina">1962</option>
+                                            <option value="1963" name="godina">1963</option>
+                                            <option value="1964" name="godina">1964</option>
+                                            <option value="1965" name="godina">1965</option>
+                                            <option value="1966" name="godina">1966</option>
+                                            <option value="1967" name="godina">1967</option>
+                                            <option value="1968" name="godina">1968</option>
+                                            <option value="1969" name="godina">1969</option>
+                                            <option value="1970" name="godina">1970</option>
+                                            <option value="1971" name="godina">1971</option>
+                                            <option value="1972" name="godina">1972</option>
+                                            <option value="1973" name="godina">1973</option>
+                                            <option value="1974" name="godina">1974</option>
+                                            <option value="1975" name="godina">1975</option>
+                                            <option value="1976" name="godina">1976</option>
+                                            <option value="1977" name="godina">1977</option>
+                                            <option value="1978" name="godina">1978</option>
+                                            <option value="1979" name="godina">1979</option>
+                                            <option value="1980" name="godina">1980</option>
+                                            <option value="1981" name="godina">1981</option>
+                                            <option value="1982" name="godina">1982</option>
+                                            <option value="1983" name="godina">1983</option>
+                                            <option value="1984" name="godina">1984</option>
+                                            <option value="1985" name="godina">1985</option>
+                                            <option value="1986" name="godina">1986</option>
+                                            <option value="1987" name="godina">1987</option>
+                                            <option value="1988" name="godina">1988</option>
+                                            <option value="1989" name="godina">1989</option>
+                                            <option value="1990" name="godina">1990</option>
+                                            <option value="1991" name="godina">1991</option>
+                                            <option value="1992" name="godina">1992</option>
+                                            <option value="1993" name="godina">1993</option>
+                                            <option value="1994" name="godina">1994</option>
+                                            <option value="1995" name="godina">1995</option>
+                                            <option value="1996" name="godina">1996</option>
+                                            <option value="1997" name="godina">1997</option>
+                                            <option value="1998" name="godina">1998</option>
+                                            <option value="1999" name="godina">1999</option>
+                                            <option value="2000" name="godina">2000</option>
+                                            <option value="2001" name="godina">2001</option>
+                                            <option value="2002" name="godina">2002</option>
+                                            <option value="2003" name="godina">2003</option>
+                                            <option value="2004" name="godina">2004</option>
+                                            <option value="2005" name="godina">2005</option>
+                                            <option value="2006" name="godina">2006</option>
+                                            <option value="2007" name="godina">2007</option>
+                                            <option value="2008" name="godina">2008</option>
+                                            <option value="2009" name="godina">2009</option>
+                                            <option value="2010" name="godina">2010</option>
+                                            <option value="2011" name="godina">2011</option>
+                                            <option value="2012" name="godina">2012</option>
+                                            <option value="2013" name="godina">2013</option>
+                                            <option value="2014" name="godina">2014</option>
+                                            <option value="2015" name="godina">2015</option>
+                                            <option value="2016" name="godina">2016</option>
+                                            <option value="2017" name="godina">2017</option>
+                                            <option value="2018" name="godina">2018</option>
+                                            <option value="2019" name="godina">2019</option>
+                                            <option value="2020" name="godina">2020</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="hide-me" class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 px-1">
+                                            <div class="form-group">
+                                                <label class="mr-1 lbl" for="month-experience-end">Završetak
+                                                    rada</label>
+                                                <select id="month-experience-end"
+                                                    class="js-example-basic-single select-experience" name="month-end"
+                                                    data-error="Unesite mjesec">
+                                                    <option value="0" disabled selected hidden>Mjesec</option>
+                                                    <option value="Januar">Januar</option>
+                                                    <option value="Februar">Februar</option>
+                                                    <option value="Mart">Mart</option>
+                                                    <option value="April">April</option>
+                                                    <option value="Maj">Maj</option>
+                                                    <option value="Jun">Jun</option>
+                                                    <option value="Jul">Jul</option>
+                                                    <option value="Avgust">Avgust</option>
+                                                    <option value="Septembar">Septembar</option>
+                                                    <option value="Oktobar">Oktobar</option>
+                                                    <option value="Novembar">Novembar</option>
+                                                    <option value="Decembar">Decembar</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 px-1">
+                                            <div class="form-group">
+                                                <label style="visibility: hidden;" class="mr-1 lbl">Početak</label>
+                                                <select id="year-experience-end"
+                                                    class="js-example-basic-single select-experience"
+                                                    name="year-experience-end"
+                                                    class="inputi_s form-control js-example-basic-single"
+                                                    data-error="Unesite godinu">
+                                                    <option value="0" disabled selected hidden>Godina</option>
+                                                    <option value="1955" name="godina">1955</option>
+                                                    <option value="1956" name="godina">1956</option>
+                                                    <option value="1957" name="godina">1957</option>
+                                                    <option value="1958" name="godina">1958</option>
+                                                    <option value="1959" name="godina">1959</option>
+                                                    <option value="1960" name="godina">1960</option>
+                                                    <option value="1961" name="godina">1961</option>
+                                                    <option value="1962" name="godina">1962</option>
+                                                    <option value="1963" name="godina">1963</option>
+                                                    <option value="1964" name="godina">1964</option>
+                                                    <option value="1965" name="godina">1965</option>
+                                                    <option value="1966" name="godina">1966</option>
+                                                    <option value="1967" name="godina">1967</option>
+                                                    <option value="1968" name="godina">1968</option>
+                                                    <option value="1969" name="godina">1969</option>
+                                                    <option value="1970" name="godina">1970</option>
+                                                    <option value="1971" name="godina">1971</option>
+                                                    <option value="1972" name="godina">1972</option>
+                                                    <option value="1973" name="godina">1973</option>
+                                                    <option value="1974" name="godina">1974</option>
+                                                    <option value="1975" name="godina">1975</option>
+                                                    <option value="1976" name="godina">1976</option>
+                                                    <option value="1977" name="godina">1977</option>
+                                                    <option value="1978" name="godina">1978</option>
+                                                    <option value="1979" name="godina">1979</option>
+                                                    <option value="1980" name="godina">1980</option>
+                                                    <option value="1981" name="godina">1981</option>
+                                                    <option value="1982" name="godina">1982</option>
+                                                    <option value="1983" name="godina">1983</option>
+                                                    <option value="1984" name="godina">1984</option>
+                                                    <option value="1985" name="godina">1985</option>
+                                                    <option value="1986" name="godina">1986</option>
+                                                    <option value="1987" name="godina">1987</option>
+                                                    <option value="1988" name="godina">1988</option>
+                                                    <option value="1989" name="godina">1989</option>
+                                                    <option value="1990" name="godina">1990</option>
+                                                    <option value="1991" name="godina">1991</option>
+                                                    <option value="1992" name="godina">1992</option>
+                                                    <option value="1993" name="godina">1993</option>
+                                                    <option value="1994" name="godina">1994</option>
+                                                    <option value="1995" name="godina">1995</option>
+                                                    <option value="1996" name="godina">1996</option>
+                                                    <option value="1997" name="godina">1997</option>
+                                                    <option value="1998" name="godina">1998</option>
+                                                    <option value="1999" name="godina">1999</option>
+                                                    <option value="2000" name="godina">2000</option>
+                                                    <option value="2001" name="godina">2001</option>
+                                                    <option value="2002" name="godina">2002</option>
+                                                    <option value="2003" name="godina">2003</option>
+                                                    <option value="2004" name="godina">2004</option>
+                                                    <option value="2005" name="godina">2005</option>
+                                                    <option value="2006" name="godina">2006</option>
+                                                    <option value="2007" name="godina">2007</option>
+                                                    <option value="2008" name="godina">2008</option>
+                                                    <option value="2009" name="godina">2009</option>
+                                                    <option value="2010" name="godina">2010</option>
+                                                    <option value="2011" name="godina">2011</option>
+                                                    <option value="2012" name="godina">2012</option>
+                                                    <option value="2013" name="godina">2013</option>
+                                                    <option value="2014" name="godina">2014</option>
+                                                    <option value="2015" name="godina">2015</option>
+                                                    <option value="2016" name="godina">2016</option>
+                                                    <option value="2017" name="godina">2017</option>
+                                                    <option value="2018" name="godina">2018</option>
+                                                    <option value="2019" name="godina">2019</option>
+                                                    <option value="2020" name="godina">2020</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="currently-working-space" class="col-0 col-md-6 px-1"></div>
+
+                                <div class="col-12 col-md-6 px-1 d-flex align-items-center">
+                                    <label for="currently-working" class="container-check">Trenutno radim ovdje
+                                        <input id="currently-working" type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <div class="col-12 px-1">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="experience-about-job">Opis posla</label>
+                                        <textarea class="form-control" id="experience-about-job" rows="5"
+                                            data-error="Opisite posao"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="toggle-experience-edit" class="d-flex justify-content-center submit-container">
+                                <input type="submit" id="add-experience" style="width: 40%;" class="btn-kreiraj"
+                                    value="Dodaj"></input>
+                                <input type="button" id="edit-experience" style="width: 40%;" class="btn-kreiraj"
+                                    value="Izmijeni"></input>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------- modal radno iskustvo end ---------------------------->
+
+
+
+
+        <!-- ----------------------------- modal obrazovanje start ----------------------------->
+        <div id="modal-obrazovanje" class="modal fade modal-obrazovanje tabindex=" -1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(241,89,42); position: relative;">
+                        <h5 class="col-12">OBRAZOVANJE</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span style="color: white;" aria-hidden="true"><img src="img/iks.png" alt=""></span>
+                        </button>
+                    </div>
+                    <div class="modal-body mb-5 px-4" id="modal-education-body">
+                        <form method="POST" action="" id="form-school">
+                            <div class="row">
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="school-fax">Škola/Fakultet</label>
+                                        <input type="text" class="form-control" name="school-fax" id="school-fax"
+                                            aria-describedby="helpId">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="level">Stepen</label>
+                                        <input type="text" class="form-control" name="level" id="level"
+                                            aria-describedby=" helpId">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="state-school">Država</label>
+                                        <select onchange="selectCities(this, 3)" id="state-school"
+                                            class="js-example-basic-single" name="state-school"
+                                            data-error="Unesite školu">
+                                            <option value="0" disabled selected>Država</option>
+                                            <option value="Crna Gora">Crna Gora</option>
+                                            <option value="Srbija">Srbija</option>
+                                            <option value="Bosna i Hercegovina">Bosna i Hercegovina</option>
+                                            <option value="China">China</option>
+                                            <option value="Francuska">Francuska</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 px-2">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="city-school">Grad</label>
+                                        <select id="city-school" class="js-example-basic-single" disabled
+                                            name="city-school" data-error="Unesite grad">
+                                            <option value="0">Odaberi</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="month-start">Početak</label>
+                                        <select id="month-start" class="js-example-basic-single" name="month-start"
+                                            data-error="Unesite mjesec">
+                                            <option value="0" disabled selected hidden>Mjesec</option>
+                                            <option value="Januar">Januar</option>
+                                            <option value="Februar">Februar</option>
+                                            <option value="Mart">Mart</option>
+                                            <option value="April">April</option>
+                                            <option value="Maj">Maj</option>
+                                            <option value="Jun">Jun</option>
+                                            <option value="Jul">Jul</option>
+                                            <option value="Avgust">Avgust</option>
+                                            <option value="Septembar">Septembar</option>
+                                            <option value="Oktobar">Oktobar</option>
+                                            <option value="Novembar">Novembar</option>
+                                            <option value="Decembar">Decembar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label style="visibility: hidden;" class="mr-1 lbl"
+                                            for="year-start">Početak</label>
+                                        <select id="year-start" class="js-example-basic-single" name="year-start"
+                                            class="inputi_s form-control js-example-basic-single"
+                                            data-error="Unesite godinu">
+                                            <option value="0" disabled selected hidden>Godina
+                                            </option>
+                                            <option value="1955" name="godina">1955</option>
+                                            <option value="1956" name="godina">1956</option>
+                                            <option value="1957" name="godina">1957</option>
+                                            <option value="1958" name="godina">1958</option>
+                                            <option value="1959" name="godina">1959</option>
+                                            <option value="1960" name="godina">1960</option>
+                                            <option value="1961" name="godina">1961</option>
+                                            <option value="1962" name="godina">1962</option>
+                                            <option value="1963" name="godina">1963</option>
+                                            <option value="1964" name="godina">1964</option>
+                                            <option value="1965" name="godina">1965</option>
+                                            <option value="1966" name="godina">1966</option>
+                                            <option value="1967" name="godina">1967</option>
+                                            <option value="1968" name="godina">1968</option>
+                                            <option value="1969" name="godina">1969</option>
+                                            <option value="1970" name="godina">1970</option>
+                                            <option value="1971" name="godina">1971</option>
+                                            <option value="1972" name="godina">1972</option>
+                                            <option value="1973" name="godina">1973</option>
+                                            <option value="1974" name="godina">1974</option>
+                                            <option value="1975" name="godina">1975</option>
+                                            <option value="1976" name="godina">1976</option>
+                                            <option value="1977" name="godina">1977</option>
+                                            <option value="1978" name="godina">1978</option>
+                                            <option value="1979" name="godina">1979</option>
+                                            <option value="1980" name="godina">1980</option>
+                                            <option value="1981" name="godina">1981</option>
+                                            <option value="1982" name="godina">1982</option>
+                                            <option value="1983" name="godina">1983</option>
+                                            <option value="1984" name="godina">1984</option>
+                                            <option value="1985" name="godina">1985</option>
+                                            <option value="1986" name="godina">1986</option>
+                                            <option value="1987" name="godina">1987</option>
+                                            <option value="1988" name="godina">1988</option>
+                                            <option value="1989" name="godina">1989</option>
+                                            <option value="1990" name="godina">1990</option>
+                                            <option value="1991" name="godina">1991</option>
+                                            <option value="1992" name="godina">1992</option>
+                                            <option value="1993" name="godina">1993</option>
+                                            <option value="1994" name="godina">1994</option>
+                                            <option value="1995" name="godina">1995</option>
+                                            <option value="1996" name="godina">1996</option>
+                                            <option value="1997" name="godina">1997</option>
+                                            <option value="1998" name="godina">1998</option>
+                                            <option value="1999" name="godina">1999</option>
+                                            <option value="2000" name="godina">2000</option>
+                                            <option value="2001" name="godina">2001</option>
+                                            <option value="2002" name="godina">2002</option>
+                                            <option value="2003" name="godina">2003</option>
+                                            <option value="2004" name="godina">2004</option>
+                                            <option value="2005" name="godina">2005</option>
+                                            <option value="2006" name="godina">2006</option>
+                                            <option value="2007" name="godina">2007</option>
+                                            <option value="2008" name="godina">2008</option>
+                                            <option value="2009" name="godina">2009</option>
+                                            <option value="2010" name="godina">2010</option>
+                                            <option value="2011" name="godina">2011</option>
+                                            <option value="2012" name="godina">2012</option>
+                                            <option value="2013" name="godina">2013</option>
+                                            <option value="2014" name="godina">2014</option>
+                                            <option value="2015" name="godina">2015</option>
+                                            <option value="2016" name="godina">2016</option>
+                                            <option value="2017" name="godina">2017</option>
+                                            <option value="2018" name="godina">2018</option>
+                                            <option value="2019" name="godina">2019</option>
+                                            <option value="2020" name="godina">2020</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label class="mr-1 lbl" for="month-end">Završetak</label>
+                                        <select id="month-end" class="js-example-basic-single" name="month-end"
+                                            data-error="Unesite mjesec">
+                                            <option value="0" disabled selected hidden>Mjesec</option>
+                                            <option value="Januar">Januar</option>
+                                            <option value="Februar">Februar</option>
+                                            <option value="Mart">Mart</option>
+                                            <option value="April">April</option>
+                                            <option value="Maj">Maj</option>
+                                            <option value="Jun">Jun</option>
+                                            <option value="Jul">Jul</option>
+                                            <option value="Avgust">Avgust</option>
+                                            <option value="Septembar">Septembar</option>
+                                            <option value="Oktobar">Oktobar</option>
+                                            <option value="Novembar">Novembar</option>
+                                            <option value="Decembar">Decembar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label style="visibility: hidden;" class="mr-1 lbl"
+                                            for="year-end">Početak</label>
+                                        <select id="year-end" class="js-example-basic-single" name="year-end"
+                                            class="inputi_s form-control js-example-basic-single"
+                                            data-error="Unesite godinu">
+                                            <option value="0" disabled selected hidden>Godina
+                                            </option>
+                                            <option value="1955" name="godina">1955</option>
+                                            <option value="1956" name="godina">1956</option>
+                                            <option value="1957" name="godina">1957</option>
+                                            <option value="1958" name="godina">1958</option>
+                                            <option value="1959" name="godina">1959</option>
+                                            <option value="1960" name="godina">1960</option>
+                                            <option value="1961" name="godina">1961</option>
+                                            <option value="1962" name="godina">1962</option>
+                                            <option value="1963" name="godina">1963</option>
+                                            <option value="1964" name="godina">1964</option>
+                                            <option value="1965" name="godina">1965</option>
+                                            <option value="1966" name="godina">1966</option>
+                                            <option value="1967" name="godina">1967</option>
+                                            <option value="1968" name="godina">1968</option>
+                                            <option value="1969" name="godina">1969</option>
+                                            <option value="1970" name="godina">1970</option>
+                                            <option value="1971" name="godina">1971</option>
+                                            <option value="1972" name="godina">1972</option>
+                                            <option value="1973" name="godina">1973</option>
+                                            <option value="1974" name="godina">1974</option>
+                                            <option value="1975" name="godina">1975</option>
+                                            <option value="1976" name="godina">1976</option>
+                                            <option value="1977" name="godina">1977</option>
+                                            <option value="1978" name="godina">1978</option>
+                                            <option value="1979" name="godina">1979</option>
+                                            <option value="1980" name="godina">1980</option>
+                                            <option value="1981" name="godina">1981</option>
+                                            <option value="1982" name="godina">1982</option>
+                                            <option value="1983" name="godina">1983</option>
+                                            <option value="1984" name="godina">1984</option>
+                                            <option value="1985" name="godina">1985</option>
+                                            <option value="1986" name="godina">1986</option>
+                                            <option value="1987" name="godina">1987</option>
+                                            <option value="1988" name="godina">1988</option>
+                                            <option value="1989" name="godina">1989</option>
+                                            <option value="1990" name="godina">1990</option>
+                                            <option value="1991" name="godina">1991</option>
+                                            <option value="1992" name="godina">1992</option>
+                                            <option value="1993" name="godina">1993</option>
+                                            <option value="1994" name="godina">1994</option>
+                                            <option value="1995" name="godina">1995</option>
+                                            <option value="1996" name="godina">1996</option>
+                                            <option value="1997" name="godina">1997</option>
+                                            <option value="1998" name="godina">1998</option>
+                                            <option value="1999" name="godina">1999</option>
+                                            <option value="2000" name="godina">2000</option>
+                                            <option value="2001" name="godina">2001</option>
+                                            <option value="2002" name="godina">2002</option>
+                                            <option value="2003" name="godina">2003</option>
+                                            <option value="2004" name="godina">2004</option>
+                                            <option value="2005" name="godina">2005</option>
+                                            <option value="2006" name="godina">2006</option>
+                                            <option value="2007" name="godina">2007</option>
+                                            <option value="2008" name="godina">2008</option>
+                                            <option value="2009" name="godina">2009</option>
+                                            <option value="2010" name="godina">2010</option>
+                                            <option value="2011" name="godina">2011</option>
+                                            <option value="2012" name="godina">2012</option>
+                                            <option value="2013" name="godina">2013</option>
+                                            <option value="2014" name="godina">2014</option>
+                                            <option value="2015" name="godina">2015</option>
+                                            <option value="2016" name="godina">2016</option>
+                                            <option value="2017" name="godina">2017</option>
+                                            <option value="2018" name="godina">2018</option>
+                                            <option value="2019" name="godina">2019</option>
+                                            <option value="2020" name="godina">2020</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="toggle-education-edit" class="d-flex justify-content-center submit-container">
+                                <input type="submit" id="add-school" style="width: 40%;" class="btn-kreiraj"
+                                    value="Dodaj"></input>
+                                <input type="button" id="edit-school" style="width: 40%;" class="btn-kreiraj"
+                                    value="Izmijeni"></input>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------ modal obrazovanje end ---------------------------- -->
+
+
+
+        <!-- ------------------------------ footer start -------------------------------- -->
         <div class="footer">
             <div class="container">
                 <div class="grid-footer">
@@ -1323,6 +1428,118 @@
                 </div>
             </div>
         </div>
+        <!-- ------------------------------ footer end -------------------------------- -->
+
+
+        <!-- ------------------------------ modal show start -------------------------------- -->
+        <div class="modal fade modal-output" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg" style="max-width:1100px;">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(241,89,42); position: relative;">
+                        <h5 class="col-12">PODACI</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span style="color: white;" aria-hidden="true"><img src="img/iks.png" alt=""></span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0 py-0" id="modal-experience-body">
+
+                        <div id="show_data" class="d-flex justify-content-between">
+                            <div class="show-first">
+                                <div class="d-flex justify-content-center">
+                                    <img id="show-photo" style="max-height: 200px; border-radius: 50%;" src=""
+                                        alt="profilna slika">
+                                </div>
+                                <div class="text-center mb-3">
+                                    <div id="show_name_surname" style="font-size: 1.4em; font-weight: 600;"></div>
+                                    <div id="show_rank"></div>
+
+                                    <div class="contact mt-4 d-flex align-items-center flex-column">
+                                        <div id="show_phone" class="show-data-cards"></div>
+                                        <div id="show_email" class="show-data-cards"></div>
+                                        <div id="show_address" class="show-data-cards"></div>
+                                    </div>
+                                </div>
+
+                                <div id="show_zip"></div>
+                                <div id="show_born_date"></div>
+                                <div id="show_gender"></div>
+
+                                <div
+                                    style="margin-top: .5rem;border-top: 1px solid #d5d5d5;padding-top: .5rem; font-weight: 600;">
+                                    Vještine:</div>
+                                <div class="d-flex flex-column" id="show_skill_output">
+                                    <div class="d-flex">
+                                        <div id="show_skill_name" style="width: 50%" class="mr-3"></div>
+                                        <div class=" w-100 h-100">
+                                            <div id="show_skill_percent" class="d-flex">
+                                                <div class="h-100"
+                                                    style="background-color: black; width: 70%; border-radius: 15px 0 0 15px;">
+                                                </div>
+                                                <div class="h-100"
+                                                    style="background-color: blue; width: 30%; border-radius: 0 15px 15px 0;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="show_foreign_languages"
+                                    style="margin-top: .5rem;border-top: 1px solid #d5d5d5;padding-top: .5rem;">
+                                </div>
+                            </div>
+
+                            <div class="show-right" style="width: 70%;">
+                                <div class="p-4">
+                                    <div class="text-center mb-4"
+                                        style="font-size: 1.2em; font-weight: 600; text-decoration: underline;">
+                                        Obrazovanje</div>
+                                    <div class="d-flex flex-column" id="show_education_show">
+                                        <div id="education_date" class="pr-4" style="width:35%"></div>
+                                        <div style="width:70%">
+                                            <span id="show_level"></span>
+                                            <span id="show_school"></span>
+                                            <div id="show_education_location"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center my-4"
+                                        style="font-size: 1.2em; font-weight: 600; text-decoration: underline;">Radno
+                                        iskustvo</div>
+                                    <div id="show_experience_show">
+                                        <div class="d-flex experience_output">
+                                            <div id="show_experience_date" class="pr-4" style="width:35%"></div>
+                                            <div style="width:70%">
+                                                <span id="show_position">Pozicja</span><span>, </span>
+                                                <span id="show_employer">Ime firme</span>
+                                                <div id="show_experience_location"
+                                                    style="font-size: .9em; color: #5f5f5f; margin-bottom: 15px;">Grad,
+                                                    Drzava</div>
+                                                <span id="show_about_job"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-3" id="show_catogory_job"></div>
+                                    <div id="show_preffered_city"></div>
+
+                                    <div
+                                        style="border: 1px solid rgb(201, 201, 201); background-color: rgb(246, 246,
+                                        246); padding: 2px 10px; margin-top: 20px; align-items: center; display: inline-flex;">
+                                        <img id="show-cv-image" src="" width="40px" height="30px">
+                                        <div class="text-center pl-2" id="show-cv-name"></div>
+                                        <div class="text-center pl-1" id="show-cv-upload-date"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
 
     </main>
 
@@ -1335,128 +1552,6 @@
     </script>
     <script defer src="js/custom-js.js"></script>
 
-
-
-    <script>
-        const cvFile = document.getElementById('cv_file');
-        const cvImage = document.getElementById('cv-photo');
-        const cvText = document.getElementById('cv-text');
-        const profileFile = document.getElementById('profile_file');
-        const profileImage = document.getElementById('profile-photo');
-        const profileText = document.getElementById('profile-text');
-
-
-        $('#add-skills').click(() => {
-
-            const numberOfSkills = $('.skill').length
-
-            const htmlSkills = ` <div class="skill">
-             <input type="text" name="skill-name" id="skill-name" placeholder="Naziv vještine">
-             <input id="my-range${numberOfSkills}"
-                 style="background: linear-gradient(90deg, #f1592a 0%, #f1592a 50%, #beb7b7 50%);" class="range"
-                 type="range" min="0" max="10" value="5" step="1"
-                 onmousemove="rangevalue1.value=value; updateRange(this)" />
-             <output id="rangevalue1"></output>
-             <span class="fa fa-times"></span>
-         </div>`
-
-            $('#skills-container').append(htmlSkills);
-
-        });
-
-        function updateRange(rangeElement) {
-
-            const idElement = $(rangeElement).attr('id')
-            const value = $(rangeElement).val();
-
-            const background =
-                `linear-gradient(90deg, #f1592a 0%, #f1592a ${value}0%, #beb7b7 ${value}0%)`;
-
-            $(rangeElement).css('background', background);
-
-        }
-
-
-        $('#close-cv').click(function () {
-            cvFile.value = null;
-            cvText.innerHTML = '<div class="lbl">Dodaj svoj CV</div>(.pdf)(max 2MB)';
-            cvText.style.color = "rgb(197, 196, 196)";
-            cvImage.src = 'img/cv.png';
-            this.style.display = "none"
-        });
-
-        $('#close-profile').click(function () {
-            profileFile.value = null;
-            profileText.innerHTML = '<div class="lbl">Dodaj svoj CV</div>(.pdf)(max 2MB)';
-            profileText.style.color = "rgb(197, 196, 196)";
-            profileImage.src = 'img/add_photo.png';
-            this.style.display = "none"
-        });
-
-
-        cvFile.addEventListener("change", function () {
-            const file = this.files[0];
-
-            if (file) {
-
-                document.getElementById('close-cv').style.display = "block"
-
-
-                if (file.size < 2097152) {
-                    let isExtensionOk = true;
-                    if (file.type ===
-                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
-                        cvImage.src = 'img/doc.png';
-                    } else if (file.type === "application/pdf") {
-                        cvImage.src = 'img/pdf.png';
-                    } else {
-                        isExtensionOk = false;
-                    }
-                    if (isExtensionOk) {
-                        const date = new Date().toLocaleDateString();
-                        const text =
-                            `CV je dodat.<br> ${date}<div style="color: rgb(197,196,196)">${file.name}</div>`;
-                        cvText.innerHTML = text;
-                        cvText.style.color = "rgb(241, 89, 41)";
-                    } else {
-                        cvText.innerHTML = "Maksimalna velicina CV je 2MB";
-                        cvText.style.color = "red";
-                    }
-
-                } else {
-                    cvText.innerHTML = "Maksimalna velicina CV je 2MB";
-                    cvText.style.color = "red";
-                }
-            } else {
-                cvText.innerHTML = '<div class="lbl">Dodaj svoj CV</div>(.pdf)(max 2MB)';
-                cvText.style.color = "rgb(197, 196, 196)";
-                cvImage.src = 'img/cv.png';
-                document.getElementById('close-cv').style.display = "none"
-
-            }
-        });
-
-
-        profileFile.addEventListener("change", function () {
-            const file = this.files[0];
-
-            if (file) {
-                if (file.size < 2097152) {
-                    const reader = new FileReader();
-                    reader.addEventListener("load", function () {
-                        profileImage.src = reader.result;
-                        profileText.innerHTML = "Slika je dodata.";
-                        profileText.style.color = "rgb(241, 89, 41)";
-                    });
-                    reader.readAsDataURL(file);
-                    document.getElementById('close-profile').style.display = "block";
-                }
-            } else {
-                profileText.innerHTML = "Maksimalna velicina slike je 2MB";
-                profileText.style.color = "red";
-            }
-        });
-    </script>
 </body>
 
 </html>

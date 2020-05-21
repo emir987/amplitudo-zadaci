@@ -29,7 +29,7 @@ input[type=range] {
     outline: none;
     height: 12px;
     cursor: pointer;
-    width: 55%;
+    width: 45%;
     border-radius: 20px;
     border: 0.5px solid #d3d3d3;
 }

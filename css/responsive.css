@@ -30,6 +30,34 @@
 
 @media only screen and (max-width: 991px) {
 
+    .response-mobile {
+        width: 100% !important;
+    }
+
+    #show_data {
+        flex-direction: row;
+    }
+
+    .show-first {
+        width: 100% !important;
+    }
+
+    .show-first div {
+        padding: 1.5rem 0 !important;
+    }
+
+    .show-right {
+        width: 100% !important;
+    }
+
+    .mobile-margin {
+        margin-top: 20px;
+    }
+
+    .footer-bottom div {
+        display: none;
+    }
+
     .bez-iskustva {
         padding-top: 0 !important;
     }
