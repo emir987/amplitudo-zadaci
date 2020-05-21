@@ -247,7 +247,19 @@
   let educations = [];
   const editEducation = document.getElementById('edit-school');
 
+  function validateAddedEducation(element) {
+      console.log(educations.length)
 
+      const numberOfSkills = document.getElementById("skills-container").childElementCount;
+
+      if (numberOfSkills == 0) {
+          showError(element, element.dataset.error);
+          return false;
+      } else {
+          removeInvaild(element);
+          return true;
+      }
+  }
 
   // =========================== form education ================================
 
@@ -780,19 +792,7 @@
       }
   }
 
-  function validateAddedEducation(element) {
-      console.log(educations.length)
 
-      const numberOfSkills = document.getElementById("skills-container").childElementCount;
-
-      if (numberOfSkills == 0) {
-          showError(element, element.dataset.error);
-          return false;
-      } else {
-          removeInvaild(element);
-          return true;
-      }
-  }
 
   //
 
