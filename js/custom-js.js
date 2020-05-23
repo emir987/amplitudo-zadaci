@@ -591,13 +591,15 @@
       document.getElementById('hide-no-experience').classList.add('hide-no-experience');
 
       formExperience.reset();
-      currentlyWorking.checked = true;
+      currentlyWorking.checked = false;
 
       for (let item of checkboxes) {
           item.selectedIndex = 0;
       }
 
-      $('.modal-radno-iskustvo').modal('hide')
+      hideMe.classList.remove('hide-me');
+      document.getElementById('currently-working-space').classList.remove('hide-me');
+      $('.modal-radno-iskustvo').modal('hide');
 
   });
 
@@ -660,6 +662,31 @@
       $(modalId).find('.employer').html(experience.employer);
       $(modalId).find('.city-state').html(`${experience.city}, ${experience.state}`);
       $(modalId).find('.about-job').html(experience.aboutJob);
+      $('.modal-radno-iskustvo').modal('hide');
+
+      document.getElementById('hide-no-experience').classList.add('hide-no-experience');
+
+      formExperience.reset();
+      currentlyWorking.checked = false;
+
+      for (let item of checkboxes) {
+          item.selectedIndex = 0;
+      }
+
+      hideMe.classList.remove('hide-me');
+      document.getElementById('currently-working-space').classList.remove('hide-me');
+      $('.modal-radno-iskustvo').modal('hide');
+      document.getElementById('hide-no-experience').classList.add('hide-no-experience');
+
+      formExperience.reset();
+      currentlyWorking.checked = false;
+
+      for (let item of checkboxes) {
+          item.selectedIndex = 0;
+      }
+
+      hideMe.classList.remove('hide-me');
+      document.getElementById('currently-working-space').classList.remove('hide-me');
       $('.modal-radno-iskustvo').modal('hide');
   });
 
@@ -1126,3 +1153,13 @@
           return false;
       }
   }
+
+  noForeignLanguage.addEventListener("change", function () {
+      if (noForeignLanguage.checked) {
+          $("#foreign-language").val("");
+          $("#foreign-language").trigger("change");
+          $("#foreign-language").prop("disabled", true);
+      } else {
+          $("#foreign-language").prop("disabled", false);
+      }
+  })

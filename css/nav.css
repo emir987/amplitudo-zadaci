@@ -119,11 +119,21 @@ pre-nav .info {
 .pre-nav .info div {
     color: white;
     font-size: 0.7em;
-    margin: 8px 0;
+    margin: 4px 0;
     padding: 0 8px;
     display: flex;
     border-right: 1px solid white;
 }
+
+.pre-nav .info div a {
+    font-size: 14px !important;
+    transition: .3s color ease;
+}
+
+.email-nav-color:hover {
+    color: #6f6f6f !important;
+}
+
 
 .pre-nav .info div:last-child {
     border-right: none;

@@ -446,4 +446,26 @@ label {
     cursor: pointer;
 }
 
-#show-password:hover {}
+.file-photo-card {
+    padding: .5px;
+}
+
+.file-photo-card:hover {
+    border: 1px solid rgb(224, 51, 7);
+    border-radius: 4px;
+    padding: 0;
+}
+
+.border-top-form {
+    border-top: 2px solid #c5c3c3;
+    margin-top: 60px;
+    padding-top: 30px;
+
+}
+
+.form-control,
+.select2-selection__rendered,
+.select2-search__field {
+    color: #f15929 !important;
+    font-size: 18px;
+}
