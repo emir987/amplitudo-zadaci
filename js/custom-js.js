@@ -845,7 +845,6 @@
       clearInputs();
   });
 
-  document.ready
 
   function clearInputs() {
       form.reset();
