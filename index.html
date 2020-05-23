@@ -68,7 +68,8 @@
         }
 
         .lbl {
-            font-size: 1.2em;
+            font-size: 1.1em;
+            color: rgb(79, 80, 85);
         }
 
         .lbl::after {
@@ -128,9 +129,9 @@
                 </div>
             </div>
 
-            <nav class="navbar navbar-expand-xl bg-custom white-nav">
+            <nav class="navbar navbar-expand-xl bg-custom animatedFadeNav" style="height: 70px;">
 
-                <a class="nav-link navbar-brand" href="#"><img id="logo-image" src="img/LogoOrange.svg"
+                <a class="nav-link navbar-brand" href="#"><img id="logo-image" src="img/LogoWhite.svg"
                         style="width: 105px;" alt="" /></a>
 
                 <button id="toggle-hamburger" class="navbar-toggler my-2 ml-auto" tycustom data-toggle="collapse"
@@ -139,29 +140,41 @@
                     <i style="color: black;" class="fa fa-bars"></i>
                 </button>
 
-
-
-
                 <div class="conatiner-fluid w-100">
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav m-auto mt-2 mt-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Moj posao </a>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03"
+                        style="height: 65px;">
+                        <ul class="navbar-nav m-auto mt-4 mt-lg-0">
+                            <li class="nav-item dropdown nav-item-bottom">
+                                <a class="nav-link" href="#" data-toggle="dropdown" class="dropdown-toggle">Moj posao
+                                    <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">O nama</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item nav-item-bottom">
                                 <a class="nav-link" href="#">Poslovi</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item dropdown nav-item-bottom">
                                 <a class="nav-link" href="#">Poslodavci</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Registrovani poslodavci</a></li>
+                                    <li><a href="#">Oglašavanje</a></li>
+                                    <li><a href="#">Targetirani kanidati</a></li>
+                                </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item nav-item-bottom">
                                 <a class="nav-link" href="#">Liga izuzetnih</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item dropdown nav-item-bottom">
                                 <a class="nav-link" href="#">Aktuelno</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Vijesti</a></li>
+                                    <li><a href="#">Savjeti</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><img id="millenial-image" src="img/MillenialWhite.svg"
+                                <a class="nav-link " href="#"><img id="millenial-image" src="img/MillenialWhite.svg"
                                         alt="Millenial" /></a>
                             </li>
                         </ul>
@@ -179,8 +192,8 @@
         </div>
         <div class="header-section grid-text">
             <div class="grid-text-inner" id="header-text-section">
-                <h1 class="mb-5"><span>REGISTRACIJA</span></h1>
-                <h3>
+                <h1 class="mb-4 pb-2 banner-header-text"><span>REGISTRACIJA</span></h1>
+                <h3 class="banner-text">
                     TRAŽIŠ POSAO? KREIRAJ NALOG I APLICIRAJ ZA NEKI OD PONUĐENIH POSLOVA
                 </h3>
             </div>
@@ -211,10 +224,10 @@
                                             </span>
                                         </label>
                                         <input type="file" id="profile_file" style="display: none;" name='slika'
-                                            accept="image/*" />
+                                            accept="image/jpeg, image/png" />
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-12 col-md-6 mb-4">
+                                <div class=" col-12 col-lg-12 col-md-6 mb-4">
                                     <div class="file-photo-card" style="position: relative;">
                                         <span id="close-cv" class="close-cv">
                                             <i class="fa fa-times " aria-hidden="true"></i>
@@ -226,8 +239,8 @@
 
                                             <!-- hide default input -->
                                             <div style="height: 0; overflow: hidden;">
-                                                <input title="Dodajte CV" required data- id="cv_file" type="file"
-                                                    id="cv_file" name='slika' accept="application/msword,
+                                                <input title="Dodajte CV" data- id="cv_file" type="file" id="cv_file"
+                                                    name='slika' accept="application/msword,
                                                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
                                                     application/pdf" data-toggle="tooltip" data-placement="top" />
                                             </div>
@@ -250,7 +263,7 @@
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="name">Ime</label>
                                         <input type="text" class="form-control" name="name" id="name"
-                                            aria-describedby="helpId">
+                                            aria-describedby="helpId" onkeypress="return /[a-z]/i.test(event.key)">
                                     </div>
                                 </div>
 
@@ -258,7 +271,7 @@
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="surname">Prezime</label>
                                         <input type="text" class="form-control" name="surname" id="surname"
-                                            aria-describedby="helpId" placeholder="">
+                                            aria-describedby="helpId" onkeypress="return /[a-z]/i.test(event.key)">
                                     </div>
                                 </div>
 
@@ -436,9 +449,9 @@
                                 <div class="col-12 col-md-6 px-2">
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="zip">Poštanski broj</label>
-                                        <input type="number" class="form-control" name="zip" id="zip"
+                                        <input type="text" class="form-control" name="zip" id="zip"
                                             aria-describedby="helpId" data-error="Poštanski broj mora imati 9 ili više
-                                            cifara">
+                                            cifara" onkeypress="return /[0-9]/i.test(event.key)">
                                     </div>
                                 </div>
 
@@ -459,8 +472,9 @@
                                     <div class="form-group">
                                         <label class="mr-1 lbl" for="experience">Ukupan broj godina radnog
                                             iskustva</label>
-                                        <input type="text" class="form-control" name="experience" id="experience"
-                                            aria-describedby="helpId" data-error="Unesite broj godina">
+                                        <input onkeypress='validate(event)' type="text" class="form-control"
+                                            name="experience" id="experience" aria-describedby="helpId"
+                                            data-error="Unesite broj godina">
                                     </div>
                                 </div>
 
@@ -477,7 +491,8 @@
                                             <option value="Dizajn">Dizajn</option>
                                             <option value="Umjetnost, kultura, muzika">Umjetnost, kultura, muzika
                                             </option>
-                                            <option value="Ekonomija, finansije i računovodstvo">Ekonomija, finansije i
+                                            <option value="Ekonomija, finansije i računovodstvo">Ekonomija,
+                                                finansije i
                                                 računovodstvo </option>
                                             <option value="Poljoprivreda, šumarstvo, ribarstvo ">Poljoprivreda,
                                                 šumarstvo, ribarstvo </option>
@@ -487,7 +502,8 @@
                                                 održavanje, popravke </option>
                                             <option value=">Web dizajn, programiranje">Web dizajn, programiranje
                                             </option>
-                                            <option value=">HR-Ljudski resursi, edukacija">HR-Ljudski resursi, edukacija
+                                            <option value=">HR-Ljudski resursi, edukacija">HR-Ljudski resursi,
+                                                edukacija
                                             </option>
                                             <option value="Marketing, PR, mediji">Marketing, PR, mediji </option>
                                             <option value="Obrazovanje, nauka">Obrazovanje, nauka</option>
@@ -495,16 +511,21 @@
                                             <option value="Medicina, zdravstvo, socijalni rad">Medicina, zdravstvo,
                                                 socijalni rad</option>
                                             <option value="Poslovi u proizvodnji">Poslovi u proizvodnji</option>
-                                            <option value="Lingvistika i kniževnost">Lingvistika i kniževnost</option>
-                                            <option value="Poslovi obezbjeđenja, zaštite na radu">Poslovi obezbjeđenja,
-                                                zaštite na radu</option>
-                                            <option value="Proizvodnja i zanatske usluge">Proizvodnja i zanatske usluge
+                                            <option value="Lingvistika i kniževnost">Lingvistika i kniževnost
                                             </option>
-                                            <option value="Logistika i skladištenje">Logistika i skladištenje</option>
+                                            <option value="Poslovi obezbjeđenja, zaštite na radu">Poslovi
+                                                obezbjeđenja,
+                                                zaštite na radu</option>
+                                            <option value="Proizvodnja i zanatske usluge">Proizvodnja i zanatske
+                                                usluge
+                                            </option>
+                                            <option value="Logistika i skladištenje">Logistika i skladištenje
+                                            </option>
                                             <option value="Briga o ljepoti">Briga o ljepoti</option>
                                             <option value="Usluge čuvanja djece, starijih">Usluge čuvanja djece,
                                                 starijih</option>
-                                            <option value="Turizam i ugostiteljstvo">Turizam i ugostiteljstvo</option>
+                                            <option value="Turizam i ugostiteljstvo">Turizam i ugostiteljstvo
+                                            </option>
                                             <option value="Elektrotehnika, mašinstvo">Elektrotehnika, mašinstvo
                                             </option>
                                             <option value="Građevinarstvo, geodezija, geologija">Građevinarstvo,
@@ -512,13 +533,15 @@
                                             <option value="Hemija, fizika, matematika">Hemija, fizika, matematika
                                             </option>
                                             <option value="Osiguranje">Osiguranje</option>
-                                            <option value="Psihologija, sociologija">Psihologija, sociologija</option>
+                                            <option value="Psihologija, sociologija">Psihologija, sociologija
+                                            </option>
                                             <option value="Rudarstvo">Rudarstvo</option>
                                             <option value="Ostalo">Ostalo</option>
                                             <option value="Farmacija">Farmacija</option>
                                             <option value="Prehrambena tehnologija">Prehrambena tehnologija</option>
                                             <option value="Rudarstvo, metalurgija">Rudarstvo, metalurgija</option>
-                                            <option value="Elektro i mašinsko održavanje">Elektro i mašinsko održavanje
+                                            <option value="Elektro i mašinsko održavanje">Elektro i mašinsko
+                                                održavanje
                                             </option>
                                             <option value="Trgovina, prodaja">Trgovina, prodaja</option>
                                             <option value="Poslovanje nekretninama">Poslovanje nekretninama</option>
@@ -534,7 +557,8 @@
                                         <label class="mr-1 lbl" for="phone">Kontakt telefon</label>
                                         <input id="phone" type="tel" class="form-control" name="phone"
                                             aria-describedby="helpId" data-html="true" data-error="Unesite broj
-                                            telefona<br>+382 67/067-067">
+                                            telefona<br>+382 67/067-067"
+                                            onkeypress="return /[0-9+ -/]/i.test(event.key)">
                                     </div>
                                 </div>
 
@@ -546,7 +570,8 @@
                                                 tražite
                                                 posao (max 3)
                                             </label>
-                                            <label class="mr-1 lbl preferirani-sm d-none" for="ime">Preferirani gradovi
+                                            <label class="mr-1 lbl preferirani-sm d-none" for="ime">Preferirani
+                                                gradovi
                                                 u
                                                 kojima
                                                 tražite
@@ -645,7 +670,7 @@
 
                         <div style="display: inline-block;" class="w-100">
                             <div class="w-50 pr-2 response-mobile" style="float: left;">
-                                <div class="section-2-input radno-iskustvo">
+                                <div id="radno-iskustvo-dodaj" class="section-2-input radno-iskustvo">
                                     <div>
                                         <span class="mr-1 lbl">Radno iskustvo</span>
                                     </div>
@@ -719,16 +744,26 @@
                         <div class="col-md-4 col-12 pr-1 pl-2">
                             <div class="form-group">
                                 <label class="mr-1 lbl" for="name">Lozinka</label>
-                                <input type="password" class="form-control" name="pw" id="pw"
-                                    data-error="Lozinka mora biti dugacka od 6 do 30 karaktera">
+                                <div style="position: relative;display: flex;">
+                                    <input type="password" class="form-control" name="pw" id="pw"
+                                        data-error="Lozinka mora biti dugacka od 6 do 30 karaktera">
+                                    <div class="show-password">
+                                        <img id="show-password" src="img/eye.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-4 col-12 pr-1 pl-2">
                             <div class="form-group">
                                 <label class="mr-1 lbl" for="name">Ponovi lozinku</label>
-                                <input type="password" class="form-control" name="repeat-pw" id="repeat-pw"
-                                    aria-describedby="helpId" data-error="Lozinka mora biti ista">
+                                <div style="position: relative; display: flex;">
+                                    <input type="password" class="form-control" name="repeat-pw" id="repeat-pw"
+                                        aria-describedby="helpId" data-error="Lozinka mora biti ista">
+                                    <div class="show-password">
+                                        <img id="show-repeat-password" src="img/eye.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -739,7 +774,8 @@
                     <div class="d-flex justify-content-center mt-2 mb-4">
                         <input id="accept-terms" type="checkbox" class="align-self-center mx-1" checked
                             data-error="Morate prihvatiti uslove korišćenja">
-                        <label style="margin-bottom: 0;" for="accept-terms">Prihvatam uslove korišćenja</label>
+                        <label style="margin-bottom: 0; margin-top: 2px; transform: translateX(4px);"
+                            for="accept-terms">Prihvatam uslove korišćenja</label>
                     </div>
                     <input type="submit" value="Kreiraj nalog" class="btn-kreiraj">
                 </div>
@@ -749,7 +785,7 @@
 
         <!-- modal radno iskustvo start -->
         <div class="modal fade modal-radno-iskustvo" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" style="max-width: 700px;">
+            <div class="modal-dialog modal-md" style="max-width: 700px;">
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: rgb(241,89,42); position: relative;">
                         <h5 class="col-12">RADNO ISKUSTVO</h5>
@@ -1049,7 +1085,7 @@
 
         <!-- ----------------------------- modal obrazovanje start ----------------------------->
         <div id="modal-obrazovanje" class="modal fade modal-obrazovanje tabindex=" -1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-md">
+            <div class="modal-dialog modal-md" style="max-width: 700px;">
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: rgb(241,89,42); position: relative;">
                         <h5 class="col-12">OBRAZOVANJE</h5>

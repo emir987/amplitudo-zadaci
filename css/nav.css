@@ -3,6 +3,7 @@
     text-transform: uppercase;
     font-family: "Rubik", sans-serif !important;
     padding: 10px 9px !important;
+    padding-bottom: 16px !important;
     margin: 0 5px;
     font-weight: 300 !important;
 }
@@ -94,7 +95,7 @@
 
 
 .navbar-nav {
-    margin-top: 11px !important;
+    margin-top: 16px !important;
 }
 
 

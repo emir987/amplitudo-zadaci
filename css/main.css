@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rubik:wght@400;500;700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -8,7 +8,110 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto',
+        sans-serif;
+
 }
+
+.dropdown:hover .dropdown-menu,
+.btn-group:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item-bottom::after {
+    display: block;
+    content: '';
+    border-bottom: 5px solid #f15929;
+    transform: scaleY(0);
+    transform-origin: -50% -50%;
+
+}
+
+.nav-item-bottom:hover::after {
+    transform: scaleY(1);
+    transition: transform ease-in-out 0.3s;
+
+}
+
+
+.dropdown-menu {
+    margin-top: -15px;
+    padding-bottom: 0;
+    transition: transform 1s ease,
+        top 1s ease;
+    margin-left: -5%;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    width: max-content;
+}
+
+.dropdown:hover .dropdown-menu {
+    animation-name: example;
+    animation-duration: .5s;
+    transition: transform 1s ease,
+        top 1s ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes example {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+
+.dropdown-menu li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 15px 0;
+    transition: .2s all ease;
+    cursor: pointer;
+    padding: 12px 30px;
+}
+
+.dropdown-menu li a {
+    color: rgb(79, 80, 85) !important;
+    transition: .2s all ease;
+    width: 100%;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.dropdown-menu li:hover a {
+    color: #f15929 !important;
+}
+
+.dropdown-toggle {
+    margin-bottom: 2px;
+}
+
+.navbar .dropdown-toggle,
+.nav-tabs .dropdown-toggle {
+    margin-bottom: 0;
+}
+
+.banner-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.banner-header-text {}
 
 ul {
     list-style-type: none;
@@ -109,8 +212,12 @@ a {
 }
 
 .header-section h1 span {
+    font-size: 2.5rem !important;
     padding: 0 10px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.466);
+    font-family: 'Rubik',
+        sans-serif;
+    font-weight: 400;
 }
 
 .dodaj {
@@ -324,3 +431,19 @@ label {
 .show-right {
     width: 70%;
 }
+
+.toggle-experience {
+    display: none !important;
+}
+
+.show-password img {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+}
+
+#show-password:hover {}

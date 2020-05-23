@@ -1,3 +1,14 @@
+  $(document).ready(function () {
+      $(".dropdown, .btn-group").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+              dropdownMenu.parent().toggleClass("open");
+          }
+      });
+      cvFile.value = null;
+  });
+
+
   let nav = $(".navbar");
   let oTop = $('#header-text-section').offset().top;
   $(window).scroll(function () {
@@ -31,37 +42,43 @@
   const profileFile = document.getElementById('profile_file');
   const profileImage = document.getElementById('profile-photo');
   const profileText = document.getElementById('profile-text');
-
-
+  let isCvValid = false;
+  let isProfilValid = false;
 
 
   $('#close-cv').click(function () {
+      closeCV();
+  });
+
+  function closeCV() {
       cvFile.value = null;
       cvText.innerHTML = '<div class="lbl">Dodaj svoj CV</div>(.pdf)(max 2MB)';
       cvText.style.color = "rgb(197, 196, 196)";
       cvImage.src = 'img/cv.png';
-      this.style.display = "none"
-  });
+      document.getElementById('close-cv').style.display = "none"
+  }
 
   $('#close-profile').click(function () {
+      closeProfile();
+  });
+
+  function closeProfile() {
       profileFile.value = null;
       profileText.innerHTML = '<div class="lbl">Dodaj svoj CV</div>(.pdf)(max 2MB)';
       profileText.style.color = "rgb(197, 196, 196)";
       profileImage.src = 'img/add_photo.png';
-      this.style.display = "none"
-  });
+      document.getElementById('close-profile').style.display = "none";
+  }
 
 
   cvFile.addEventListener("change", function () {
       const file = this.files[0];
 
       if (file) {
-          document.getElementById('close-cv').style.display = "block"
-
           if (file.size < 2097152) {
               let isExtensionOk = true;
               if (file.type ===
-                  "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+                  "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || file.type === 'application/msword') {
                   cvImage.src = 'img/doc.png';
               } else if (file.type === "application/pdf") {
                   cvImage.src = 'img/pdf.png';
@@ -69,29 +86,48 @@
                   isExtensionOk = false;
               }
               if (isExtensionOk) {
+                  document.getElementById('close-cv').style.display = "block";
+
                   const date = new Date().toLocaleDateString();
                   const text =
                       `CV je dodat. <div id="cv-upload-time">${date}</div> <div id="cv-name" style="color: rgb(197,196,196)">${file.name}</div>`;
                   cvText.innerHTML = text;
                   cvText.style.color = "rgb(241, 89, 41)";
+                  removeInvaild(cvFile);
               } else {
-                  cvText.innerHTML = "Maksimalna velicina CV je 2MB";
+                  cvText.innerHTML = "Dozvoljeni su samo word i pdf formati";
                   cvText.style.color = "red";
+                  this.value = null;
               }
 
           } else {
               cvText.innerHTML = "Maksimalna velicina CV je 2MB";
               cvText.style.color = "red";
               cvImage.src = "img/cv.png";
+              this.value = null;
           }
       } else {
           cvText.innerHTML = '<div class="lbl">Dodaj svoj CV</div>(.pdf)(max 2MB)';
           cvText.style.color = "rgb(197, 196, 196)";
           cvImage.src = 'img/cv.png';
-          document.getElementById('close-cv').style.display = "none"
-
+          document.getElementById('close-cv').style.display = "none";
+          this.value = null;
       }
+
   });
+
+  function validate_fileupload(fileName) {
+      var allowed_extensions = new Array("doc", "docx", "gif");
+      var file_extension = fileName.split('.').pop().toLowerCase(); // split function will split the filename by dot(.), and pop function will pop the last element from the array which will give you the extension as well. If there will be no extension then it will return the filename.
+
+      for (var i = 0; i <= allowed_extensions.length; i++) {
+          if (allowed_extensions[i] == file_extension) {
+              return true; // valid file extension
+          }
+      }
+
+      return false;
+  }
 
 
   profileFile.addEventListener("change", function () {
@@ -99,18 +135,27 @@
 
       if (file) {
           if (file.size < 2097152) {
-              const reader = new FileReader();
-              reader.addEventListener("load", function () {
-                  profileImage.src = reader.result;
-                  profileText.innerHTML = "Slika je dodata.";
-                  profileText.style.color = "rgb(241, 89, 41)";
-              });
-              reader.readAsDataURL(file);
-              document.getElementById('close-profile').style.display = "block";
+              console.log(file.type)
+              if (file.type === "image/png" || file.type === "image/jpg") {
+                  const reader = new FileReader();
+                  reader.addEventListener("load", function () {
+                      profileImage.src = reader.result;
+                      profileText.innerHTML = "Slika je dodata.";
+                      profileText.style.color = "rgb(241, 89, 41)";
+                  });
+                  reader.readAsDataURL(file);
+                  document.getElementById('close-profile').style.display = "block";
+              } else {
+                  profileText.innerHTML = "Samo su jpg i png formati dozvoljeni";
+                  profileText.style.color = "red";
+                  profileImage.src = 'img/add_photo.png';
+                  this.value = null;
+              }
           } else {
               profileText.innerHTML = "Maksimalna velicina slike je 2MB";
               profileText.style.color = "red";
               profileImage.src = 'img/add_photo.png';
+              this.value = null;
           }
       }
   });
@@ -217,6 +262,14 @@
           return markup;
       }
 
+  });
+
+  //reset selection on reset form
+  $("select").closest("form").on("reset", function (ev) {
+      var targetJQForm = $(ev.target);
+      setTimeout((function () {
+          this.find("select").trigger("change");
+      }).bind(targetJQForm), 0);
   });
 
 
@@ -355,7 +408,12 @@
       }
       educations.push(currentEducation);
       educationCounter++;
-      $('.modal-obrazovanje').modal('hide')
+
+      $('.modal-obrazovanje').modal('hide');
+
+      formSchool.reset();
+
+
 
   });
 
@@ -532,9 +590,18 @@
 
       document.getElementById('hide-no-experience').classList.add('hide-no-experience');
 
+      formExperience.reset();
+      currentlyWorking.checked = true;
+
+      for (let item of checkboxes) {
+          item.selectedIndex = 0;
+      }
+
       $('.modal-radno-iskustvo').modal('hide')
 
   });
+
+
 
 
   function loadExperienceOnEdit(id) {
@@ -646,6 +713,9 @@
   form.addEventListener('submit', (e) => {
       e.preventDefault();
 
+      //cv validate
+      if (!validateAddedCV(cvFile)) return;
+
       //name validate
       if (!isEmpty(name, "Unesite vaše ime", 2)) return;
 
@@ -701,9 +771,27 @@
       }
 
       showData();
+      clearInputs();
   });
 
+  function clearInputs() {
+      form.reset();
+      currentlyWorking.checked = true;
+      for (let item of checkboxes) {
+          item.selectedIndex = 0;
+      }
+      noForeignLanguage.checked = false;
+      noExperience.checked = false;
+      document.getElementById('skills-container').textContent = '';
 
+      closeCV();
+      closeProfile();
+  }
+
+
+  noExperience.addEventListener("change", function () {
+      document.getElementById('radno-iskustvo-dodaj').classList.toggle('toggle-experience')
+  })
 
 
   function showData() {
@@ -829,7 +917,37 @@
       }
   }
 
+  function validateAddedCV(element) {
+      if (element.files.length == 0) {
+          showError(element, "Odaberite CV");
+          return false;
+      } else {
+          removeInvaild(element);
+          return true;
+      }
+  }
 
+
+
+
+
+  function validate(evt) {
+      var theEvent = evt || window.event;
+
+      // Handle paste
+      if (theEvent.type === 'paste') {
+          key = event.clipboardData.getData('text/plain');
+      } else {
+          // Handle key press
+          var key = theEvent.keyCode || theEvent.which;
+          key = String.fromCharCode(key);
+      }
+      var regex = /[0-9]|\./;
+      if (!regex.test(key)) {
+          theEvent.returnValue = false;
+          if (theEvent.preventDefault) theEvent.preventDefault();
+      }
+  }
 
   //
 
@@ -977,4 +1095,34 @@
               block: "center",
           });
       })
+  }
+
+  const showPassword = document.getElementById('show-password');
+  const showRepeatPassword = document.getElementById('show-repeat-password');
+
+  showPassword.addEventListener('click', function () {
+      pwVisibility(pw, this);
+  })
+
+  showRepeatPassword.addEventListener('click', function () {
+      pwVisibility(repeatPw, this);
+  })
+
+  function pwVisibility(password, pwImage) {
+      if (password.type === "password") {
+          password.type = "text";
+          pwImage.src = "img/eye-green.png"
+      } else {
+          password.type = "password";
+          pwImage.src = "img/eye.png"
+      }
+  }
+
+  function phonePreventError(event) {
+      var regex = new RegExp("^[0-9-+/-]");
+      var key = String.fromCharCode(event.charCode ? event.which : event.charCode);
+      if (!regex.test(key)) {
+          event.preventDefault();
+          return false;
+      }
   }
