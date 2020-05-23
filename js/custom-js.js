@@ -135,8 +135,7 @@
 
       if (file) {
           if (file.size < 2097152) {
-              console.log(file.type)
-              if (file.type === "image/png" || file.type === "image/jpg") {
+              if (file.type === "image/png" || file.type === "image/jpg" || file.type === "image/jpeg") {
                   const reader = new FileReader();
                   reader.addEventListener("load", function () {
                       profileImage.src = reader.result;
@@ -315,7 +314,6 @@
   const editEducation = document.getElementById('edit-school');
 
   function validateAddedSkills(element) {
-      console.log(educations.length)
 
       const numberOfSkills = document.getElementById("skills-container").childElementCount;
 
@@ -412,8 +410,9 @@
       $('.modal-obrazovanje').modal('hide');
 
       formSchool.reset();
-
-
+      for (let item of checkboxes) {
+          item.selectedIndex = 0;
+      }
 
   });
 
@@ -424,13 +423,28 @@
       let [education] = educations.filter(element => element.id == el);
 
       $('.modal-obrazovanje').find('#school-fax').val(education.school);
+      $('.modal-obrazovanje').find('#school-fax').trigger('change');
+
       $('.modal-obrazovanje').find('#level').val(education.level);
+      $('.modal-obrazovanje').find('#level').trigger('change');
+
       $('.modal-obrazovanje').find('#state-school').val(education.state);
+      $('.modal-obrazovanje').find('#state-school').trigger('change');
+
       $('.modal-obrazovanje').find('#city-school').val(education.city);
+      $('.modal-obrazovanje').find('#city-school').trigger('change');
+
       $('.modal-obrazovanje').find('#month-start').val(education.monthStart);
+      $('.modal-obrazovanje').find('#month-start').trigger('change');
+
       $('.modal-obrazovanje').find('#year-start').val(education.yearStart);
+      $('.modal-obrazovanje').find('#year-start').trigger('change');
+
       $('.modal-obrazovanje').find('#month-end').val(education.monthEnd);
+      $('.modal-obrazovanje').find('#month-end').trigger('change');
+
       $('.modal-obrazovanje').find('#year-end').val(education.yearEnd);
+      $('.modal-obrazovanje').find('#year-end').trigger('change');
       //   $('#education').attr('id', education.id);
       document.getElementById('modal-education-body').setAttribute('data-id', education.id)
 
@@ -446,8 +460,12 @@
       const id = document.getElementById('modal-education-body').dataset.id;
       let [education] = educations.filter(element => element.id == id);
 
-      if (!validateEducation()) return;
-
+      let checkboxes;
+      if (!validateEducation()) {
+          return;
+      } else {
+          checkboxes = validateEducation();
+      }
 
       education.school = $('.modal-obrazovanje').find('#school-fax').val();
       education.level = $('.modal-obrazovanje').find('#level').val();
@@ -465,7 +483,10 @@
       $(modalId).find('.education-city-state').html(`${education.city}, ${education.state}`);
       $(modalId).find('.level').html(education.level);
       $('.modal-obrazovanje').modal('hide');
-
+      formSchool.reset();
+      for (let item of checkboxes) {
+          item.selectedIndex = 0;
+      }
   });
 
   function removeEducation(counter) {
@@ -612,14 +633,32 @@
       let [experience] = experiences.filter(element => element.id == el);
 
       $('.modal-radno-iskustvo').find('#experience-position').val(experience.position);
+      $('.modal-obrazovanje').find('#experience-position').trigger('change');
+
       $('.modal-radno-iskustvo').find('#employer').val(experience.employer);
+      $('.modal-radno-iskustvo').find('#employer').trigger('change');
+
       $('.modal-radno-iskustvo').find('#state-experience').val(experience.state);
+      $('.modal-radno-iskustvo').find('#state-experience').trigger('change');
+
       $('.modal-radno-iskustvo').find('#city-experience').val(experience.city);
+      $('.modal-radno-iskustvo').find('#city-experience').trigger('change');
+
       $('.modal-radno-iskustvo').find('#month-experience-start').val(experience.monthStart);
+      $('.modal-radno-iskustvo').find('#month-experience-start').trigger('change');
+
       $('.modal-radno-iskustvo').find('#year-experience-start').val(experience.yearStart);
+      $('.modal-radno-iskustvo').find('#year-experience-start').trigger('change');
+
       $('.modal-radno-iskustvo').find('#month-experience-end').val(experience.monthEnd);
+      $('.modal-radno-iskustvo').find('#month-experience-end').trigger('change');
+
       $('.modal-radno-iskustvo').find('#year-experience-end').val(experience.yearEnd);
+      $('.modal-radno-iskustvo').find('#year-experience-end').trigger('change');
+
       $('.modal-radno-iskustvo').find('#experience-about-job').val(experience.aboutJob);
+      $('.modal-radno-iskustvo').find('#experience-about-job').trigger('change');
+
 
       //   $('#education').attr('id', education.id);
       document.getElementById('modal-experience-body').setAttribute('data-id', experience.id)
@@ -636,7 +675,12 @@
       const elId = document.getElementById('modal-experience-body').dataset.id;
       let [experience] = experiences.filter(element => element.id == elId);
 
-      if (!validateExperience()) return;
+      let checkboxes;
+      if (!validateExperience()) {
+          return;
+      } else {
+          checkboxes = validateExperience();
+      }
 
       experience.position = $('.modal-radno-iskustvo').find('#experience-position').val();
       experience.employer = $('.modal-radno-iskustvo').find('#employer').val();
@@ -801,15 +845,31 @@
       clearInputs();
   });
 
+  document.ready
+
   function clearInputs() {
       form.reset();
       currentlyWorking.checked = true;
+
+      const checkboxes = document.getElementsByTagName('select');
+
       for (let item of checkboxes) {
+
+          if (item.multiple) {
+              $(item).val(null).trigger('change');
+              continue;
+          }
+
           item.selectedIndex = 0;
+          $(item).trigger('change');
       }
       noForeignLanguage.checked = false;
       noExperience.checked = false;
-      document.getElementById('skills-container').textContent = '';
+      document.getElementById('skills-container').innerHTML = '';
+      experiences = [];
+      educations = [];
+      document.getElementById('iskustvo').innerHTML = "";
+      document.getElementById('education').innerHTML = "";
 
       closeCV();
       closeProfile();
@@ -859,8 +919,6 @@
                     </div>`
       });
       document.getElementById("show_skill_output").innerHTML = skills;
-
-      console.log(experiences);
 
 
       let experienceHTML = ""
