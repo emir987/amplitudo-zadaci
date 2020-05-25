@@ -5,6 +5,27 @@
               dropdownMenu.parent().toggleClass("open");
           }
       });
+
+      //render year options
+
+
+      for (i = 1; i <= 31; i++) {
+          $('#date').append($('<option />').val(i).html(i));
+      }
+
+
+      for (i = new Date().getFullYear() - 6; i > 1950; i--) {
+          $('#year').append(`<option value="${i}">${i}</option>`)
+      }
+
+      let exp_edu_years = document.getElementsByClassName('exp-edu-year');
+      for (let index = 0; index < exp_edu_years.length; index++) {
+          for (i = new Date().getFullYear(); i > 1950; i--) {
+              const option = exp_edu_years[index];
+              $(option).append(`<option value="${i}">${i}</option>`)
+          }
+      }
+
       cvFile.value = null;
   });
 
@@ -291,6 +312,13 @@
   const isEducation = document.getElementById('dodaj-iskustvo');
   const isSkills = document.getElementById('add-skills');
 
+  const cities = {
+      "mne": ['Bar', 'Podgorica', 'Herceg Novi', 'Kotor', 'Rozaje'],
+      "bih": ['Sarajevo', 'Mostar'],
+      "china": ['Peking', 'Hong Kong'],
+      "fra": ['Paris', 'Nice'],
+      "srb": ['Beograd', 'Nis']
+  };
 
 
   const formExperience = document.getElementById('form-work-experience');
@@ -1143,26 +1171,19 @@
       }
   }
 
-  function selectCities(state, element) {
-      //select cities by state-back
-      cities = `<option value="0" disabled selected hidden>Odaberi</option>
-                <option value="Bar">Bar</option>
-                <option value="Podgorica">Podgorica</option>
-                <option value="Herceg Novi">Herceg Novi</option>
-                <option value="Kotor">Kotor</option>
-                <option value="Rozaje">Rozaje</option>`;
-      if (element == 1) {
-          city.disabled = false;
-          city.innerHTML = cities;
-      } else if (element == 2) {
-          const city = document.getElementById('city-experience')
-          city.disabled = false;
-          city.innerHTML = cities;
-      } else {
-          const city = document.getElementById('city-school');
-          city.disabled = false;
-          city.innerHTML = cities;
+  function selectCities(state, cityID) {
+      const cityElement = document.getElementById(cityID);
+      console.log(cityElement);
+      const selectedState = state.value;
+      cityElement.disabled = false;
+
+      const selectedCitiesByState = cities[selectedState];
+
+      cityElement.innerHTML = '<option value="0" disabled selected hidden>Odaberi</option>';
+      for (i = 0; i < selectedCitiesByState.length; i++) {
+          cityElement.innerHTML = cityElement.innerHTML + `<option value="${selectedCitiesByState[i]}">${selectedCitiesByState[i]}</option>`;
       }
+
   }
 
 
@@ -1220,3 +1241,10 @@
           $("#foreign-language").prop("disabled", false);
       }
   })
+
+
+
+
+  //   for (i = 1; i <= 31; i++) {
+  //       $('#date').append($('<option />').val(i).html(i));
+  //   }
